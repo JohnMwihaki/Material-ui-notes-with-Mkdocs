@@ -1,0 +1,3622 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>My Docs</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">My Docs</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#typography" class="nav-link">Typography</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#typography-prop" class="nav-link">Typography prop</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#button-and-icons" class="nav-link">Button and icons</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#color-prop" class="nav-link">color prop</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#size-prop" class="nav-link">size prop</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#icons-in-mui" class="nav-link">Icons in MUI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#card-and-containers" class="nav-link">Card and Containers</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#container" class="nav-link">Container</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#mui-grid-system" class="nav-link">MUI GRID SYSTEM</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#stack-in-mui-and-spacing" class="nav-link">Stack in Mui and Spacing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#paper-and-surface-components-in-material-ui" class="nav-link">Paper and Surface Components in Material UI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#forms-and-inputs-textfield-and-input-variants" class="nav-link">Forms and Inputs TextField and Input Variants</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#handling-form-state-with-formik-or-react-hook-form" class="nav-link">Handling Form State (with Formik or React Hook Form)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#navigation-components" class="nav-link">Navigation Components</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#feedback-and-ui-elements" class="nav-link">Feedback and UI Elements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="typography">Typography</h1>
+<p>used for styling text things like :
+- Font size</p>
+<ul>
+<li>
+<p>Font family</p>
+</li>
+<li>
+<p>Font weight (boldness)</p>
+</li>
+<li>
+<p>Line height</p>
+</li>
+<li>
+<p>Letter spacing</p>
+</li>
+<li>
+<p>Alignment</p>
+</li>
+</ul>
+<h2 id="typography-prop">Typography prop</h2>
+<p><strong>Variant</strong>
+ exmples h1,h2,body1.body2,caption,overline,button</p>
+<ul>
+<li>components</li>
+</ul>
+<p>inplace of varinat you use it like a teller i have h3 , on variant but hi component</p>
+<ul>
+<li>
+<p>gutterBottom -used to add space below act like <br/></p>
+</li>
+<li>
+<p>align </p>
+</li>
+<li>
+<p>color</p>
+</li>
+<li>
+<p>sx -style extension -for styling</p>
+</li>
+</ul>
+<p>Example Default Typography:
+|Variant    |Font Size| Font Weight|
+|--------|--------|-------|
+|h1|    96px|   300|
+|h2|    60px|   300|
+|h3|    48px|   400|
+|h4|    34px    |400|
+|h5|    24px|   400|
+|h6|    20px|   500|
+|body1  |16px   |400|
+|body2  |14px   |400|</p>
+<h2 id="button-and-icons">Button and icons</h2>
+<h4 id="button-contain-this-variants">button -contain this variants</h4>
+<ul>
+<li>text,contained,outline</li>
+</ul>
+<h2 id="color-prop">color prop</h2>
+<p>contain the following styling color</p>
+<ul>
+<li>primary,secondary,error,warning,info,success</li>
+</ul>
+<h2 id="size-prop">size prop</h2>
+<ul>
+<li>small,medium large i.e sm,md,l,</li>
+</ul>
+<p><strong>NOTE</strong> <b>sx</b> used for inner responsive styling </p>
+<h2 id="icons-in-mui">Icons in MUI</h2>
+<pre><code>npm install @mui/icons-material
+</code></pre>
+<p>we have front and end icons</p>
+<table>
+<thead>
+<tr>
+<th>Icon Position</th>
+<th>Prop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Before text</td>
+<td><code>startIcon={&lt;Icon /&gt;}</code></td>
+</tr>
+<tr>
+<td>After text</td>
+<td><code>endIcon={&lt;Icon /&gt;}</code></td>
+</tr>
+</tbody>
+</table>
+<h1 id="card-and-containers">Card and Containers</h1>
+<p>Card- is a rectangular container used to group related information like profile ,article,product or messege</p>
+<p>a title,a short paragraph ,an image or icon ,a button or action <em><Card/></em></p>
+<p><em>Components in card</em></p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Card</code></td>
+<td>The outer container</td>
+</tr>
+<tr>
+<td><code>CardContent</code></td>
+<td>Holds the text</td>
+</tr>
+<tr>
+<td><code>CardMedia</code></td>
+<td>Adds an image or video</td>
+</tr>
+<tr>
+<td><code>CardActions</code></td>
+<td>Holds buttons</td>
+</tr>
+<tr>
+<td><code>Typography</code></td>
+<td>Used for title, subtitle, and body</td>
+</tr>
+</tbody>
+</table>
+<h4 id="what-cardmedia-props-mean">What CardMedia props mean:</h4>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>component="img"</code></td>
+<td>Tell MUI it's an image element</td>
+</tr>
+<tr>
+<td><code>height="140"</code></td>
+<td>Height in px</td>
+</tr>
+<tr>
+<td><code>image="..."</code></td>
+<td>URL of image</td>
+</tr>
+<tr>
+<td><code>alt="..."</code></td>
+<td>Alt text (accessibility)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="container">Container</h2>
+<p>A Container is a layout component that centers and adds horizontal padding to your content.It’s commonly used to wrap the main body of your page.</p>
+<pre><code class="language-bash">&lt;Container maxWidth=&quot;md&quot; sx={{ py: 4 }}&gt;
+  &lt;Grid container spacing={3}&gt;
+    &lt;Grid item xs={12} sm={6} md={4}&gt;
+      &lt;FullCard /&gt;
+    &lt;/Grid&gt;
+    &lt;Grid item xs={12} sm={6} md={4}&gt;
+      &lt;FullCard /&gt;
+    &lt;/Grid&gt;
+  &lt;/Grid&gt;
+&lt;/Container&gt;
+</code></pre>
+<p><strong>maxwidth</strong> it have this values </p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>xs</code></td>
+<td>extra-small (up to 600px)</td>
+</tr>
+<tr>
+<td><code>sm</code></td>
+<td>small (up to 900px)</td>
+</tr>
+<tr>
+<td><code>md</code></td>
+<td>medium (up to 1200px) (default)</td>
+</tr>
+<tr>
+<td><code>lg</code></td>
+<td>large (up to 1536px)</td>
+</tr>
+<tr>
+<td><code>xl</code></td>
+<td>extra-large (max width unlimited)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grid-and-container">Grid and Container</h3>
+<p>The Grid system is a flexible layout system based on a 12-column design.</p>
+<p>You divide space like this:</p>
+<ul>
+<li>
+<p>xs={12} → full width</p>
+</li>
+<li>
+<p>xs={6} → half</p>
+</li>
+<li>
+<p>xs={4} → 1/3</p>
+</li>
+<li>
+<p>xs={3} → 1/4</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;Grid container&gt;</code></td>
+<td>The outer wrapper – it <strong>holds rows</strong></td>
+</tr>
+<tr>
+<td><code>&lt;Grid item&gt;</code></td>
+<td>The columns or <strong>cells inside the row</strong></td>
+</tr>
+</tbody>
+</table>
+<p>exmple </p>
+<pre><code>import { Grid, Paper } from '@mui/material';
+
+function TwoColumns() {
+  return (
+    &lt;Grid container spacing={2}&gt;
+      &lt;Grid item xs={6}&gt;
+        &lt;Paper sx={{ p: 2 }}&gt;Left Side&lt;/Paper&gt;
+      &lt;/Grid&gt;
+      &lt;Grid item xs={6}&gt;
+        &lt;Paper sx={{ p: 2 }}&gt;Right Side&lt;/Paper&gt;
+      &lt;/Grid&gt;
+    &lt;/Grid&gt;
+  );
+}
+</code></pre>
+<p><strong>Breakdown:</strong>
+container means this is a grid row</p>
+<p>item means this is a column</p>
+<p>xs={6} means 6 out of 12 columns → half width</p>
+<p>spacing={2} adds space between columns</p>
+<p><strong>exmple 2</strong></p>
+<pre><code>import { Container, Grid, Paper, Typography } from '@mui/material';
+
+function GridLayoutExample() {
+  return (
+    &lt;Container maxWidth=&quot;md&quot; sx={{ mt: 4 }}&gt;
+      &lt;Typography variant=&quot;h4&quot; gutterBottom&gt;
+        My Grid Layout
+      &lt;/Typography&gt;
+
+      &lt;Grid container spacing={3}&gt;
+        &lt;Grid item xs={12} sm={6} md={4}&gt;
+          &lt;Paper sx={{ p: 2 }}&gt;Item 1&lt;/Paper&gt;
+        &lt;/Grid&gt;
+        &lt;Grid item xs={12} sm={6} md={4}&gt;
+          &lt;Paper sx={{ p: 2 }}&gt;Item 2&lt;/Paper&gt;
+        &lt;/Grid&gt;
+        &lt;Grid item xs={12} sm={6} md={4}&gt;
+          &lt;Paper sx={{ p: 2 }}&gt;Item 3&lt;/Paper&gt;
+        &lt;/Grid&gt;
+      &lt;/Grid&gt;
+    &lt;/Container&gt;
+  );
+}
+</code></pre>
+<p>You can also combine grid with cards and it work perfectly fine </p>
+<p><em>spacing</em> add space</p>
+<pre><code>&lt;Grid container spacing={3}&gt;
+  {Array.from(Array(6)).map((_, index) =&gt; (
+    &lt;Grid item xs={12} sm={6} md={4} key={index}&gt;
+      &lt;Card&gt;
+        &lt;CardContent&gt;
+          &lt;Typography variant=&quot;h6&quot;&gt;Card #{index + 1}&lt;/Typography&gt;
+          &lt;Typography variant=&quot;body2&quot;&gt;This is some content.&lt;/Typography&gt;
+        &lt;/CardContent&gt;
+      &lt;/Card&gt;
+    &lt;/Grid&gt;
+  ))}
+&lt;/Grid&gt;
+</code></pre>
+<h1 id="mui-grid-system">MUI GRID SYSTEM</h1>
+<p>The Material UI Grid system is a responsive layout system based on 12 columns, using Flexbox under the hood.Adjust layout per screen size (xs, sm, md, lg),</p>
+<p>KEY APRTS OF Grid in MUI</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;Grid container&gt;</code></td>
+<td>Defines a <strong>row</strong> of items</td>
+</tr>
+<tr>
+<td><code>&lt;Grid item&gt;</code></td>
+<td>Defines a <strong>column</strong> inside the row</td>
+</tr>
+</tbody>
+</table>
+<p><strong>N/B</strong> Remember to be using arrays.from or map to render cards in grid system just for easy readerbilty</p>
+<h2 id="stack-in-mui-and-spacing">Stack in Mui and Spacing</h2>
+<p>A Stack in Material UI is a layout component that helps you place things in a row or column, and adds spacing between them automatically.</p>
+<p>It’s like saying:</p>
+<p><em>“Put these buttons one below the other — and give me 20px between them — and don’t make me write CSS for it.”</em></p>
+<pre><code>import Stack from '@mui/material/Stack';
+</code></pre>
+<p><strong>So by default, a Stack places elements vertically, with a configurable space between them.</strong></p>
+<h4 id="spacing-in-stack">Spacing in stack</h4>
+<p>spacing is a prop you use to set the space between child components inside a Stack.</p>
+<blockquote>
+<p>*How It Works:</p>
+<p>The unit is based on the theme spacing. </p>
+<p>In Material UI, 1 spacing unit = 8px.*</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Pixels</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1</code></td>
+<td>8px</td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td>16px</td>
+</tr>
+<tr>
+<td><code>3</code></td>
+<td>24px</td>
+</tr>
+<tr>
+<td><code>4</code></td>
+<td>32px</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What the sx properties mean</strong></p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td>Padding (inside the element)</td>
+</tr>
+<tr>
+<td><code>m</code></td>
+<td>Margin (outside the element)</td>
+</tr>
+<tr>
+<td><code>px</code></td>
+<td>Padding left + right</td>
+</tr>
+<tr>
+<td><code>py</code></td>
+<td>Padding top + bottom</td>
+</tr>
+<tr>
+<td><code>mt</code></td>
+<td>Margin top</td>
+</tr>
+<tr>
+<td><code>mb</code></td>
+<td>Margin bottom</td>
+</tr>
+<tr>
+<td><code>bgcolor</code></td>
+<td>Background color (from theme)</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>Text color (from theme)</td>
+</tr>
+</tbody>
+</table>
+<h1 id="paper-and-surface-components-in-material-ui">Paper and Surface Components in Material UI</h1>
+<p>Paper is a surface component that gives a white (or themed) background with elevation (shadow) — like a sheet of paper.</p>
+<p>It’s often used as a container that:</p>
+<ul>
+<li>
+<p>Holds cards</p>
+</li>
+<li>
+<p>Wraps forms</p>
+</li>
+<li>
+<p>Creates panels or dialogs</p>
+</li>
+<li>
+<p>Visually separates content from the background</p>
+</li>
+</ul>
+<p><em>why use paper</em></p>
+<table>
+<thead>
+<tr>
+<th>Problem Without Paper</th>
+<th>Solved With Paper</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content looks flat</td>
+<td>Paper adds visual depth</td>
+</tr>
+<tr>
+<td>No padding or border</td>
+<td>Paper provides clean area</td>
+</tr>
+<tr>
+<td>Background may blend</td>
+<td>Paper separates background</td>
+</tr>
+</tbody>
+</table>
+<p><em>think of Paper as the foundation for all UI blocks — cards, alerts, forms, dialogs,</em></p>
+<p><strong>Elevation</strong> controls how much shadow depth the paper has. It makes the Paper look like it’s floating above the background.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Visual Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td>No shadow (flat)</td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td>Small soft shadow</td>
+</tr>
+<tr>
+<td><code>3</code></td>
+<td>Moderate shadow (default look)</td>
+</tr>
+<tr>
+<td><code>10</code>, <code>24</code></td>
+<td>Very high/floating look</td>
+</tr>
+</tbody>
+</table>
+<p><em>N/B</em>  Maximum is 24 — use higher values for modal or dialog boxes.</p>
+<p><strong>Combinning paper with Grid or stack</strong></p>
+<pre><code>&lt;Stack spacing={3}&gt;
+  &lt;Paper elevation={1} sx={{ p: 2 }}&gt;
+    &lt;Typography variant=&quot;h6&quot;&gt;Login Form&lt;/Typography&gt;
+    &lt;TextField label=&quot;Email&quot; fullWidth /&gt;
+    &lt;TextField label=&quot;Password&quot; type=&quot;password&quot; fullWidth /&gt;
+    &lt;Button variant=&quot;contained&quot;&gt;Login&lt;/Button&gt;
+  &lt;/Paper&gt;
+
+  &lt;Paper elevation={4} sx={{ p: 2, bgcolor: 'warning.light' }}&gt;
+    Warning Area
+  &lt;/Paper&gt;
+&lt;/Stack&gt;
+</code></pre>
+<h4 id="when-to-use-paper">when to use paper</h4>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>Why Use Paper?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cards</td>
+<td>Add background and shadow for floating effect</td>
+</tr>
+<tr>
+<td>Forms</td>
+<td>Give user input areas a clear container</td>
+</tr>
+<tr>
+<td>Alerts or messages</td>
+<td>Make them stand out from page background</td>
+</tr>
+<tr>
+<td>Dialog/Modal content</td>
+<td>Create raised content above everything else</td>
+</tr>
+<tr>
+<td>Content sectioning</td>
+<td>Break page into sections visually</td>
+</tr>
+</tbody>
+</table>
+<h1 id="forms-and-inputs-textfield-and-input-variants">Forms and Inputs TextField and Input Variants</h1>
+<p><em>What Is a TextField?</em></p>
+<p>TextField is the main form input component in MUI used for typing text, emails, passwords, numbers, etc.an input field,a label,validation/error styling,and helper text — all in one.</p>
+<p><strong>Textfield props</strong></p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>label</code></td>
+<td>Adds a floating label inside the field</td>
+</tr>
+<tr>
+<td><code>variant</code></td>
+<td>Controls style: <code>outlined</code>, <code>filled</code>, or <code>standard</code></td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Defines input type: <code>text</code>, <code>email</code>, <code>password</code>, <code>number</code>, etc.</td>
+</tr>
+<tr>
+<td><code>fullWidth</code></td>
+<td>Makes the field stretch to 100% width of its container</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td>Current value (for controlled input)</td>
+</tr>
+<tr>
+<td><code>onChange</code></td>
+<td>Function that handles typing changes</td>
+</tr>
+<tr>
+<td><code>error</code></td>
+<td>Boolean: makes field red when true</td>
+</tr>
+<tr>
+<td><code>helperText</code></td>
+<td>Extra message under the input (e.g., “Must be at least 6 characters”)</td>
+</tr>
+</tbody>
+</table>
+<p><em>controlled state inputs</em></p>
+<pre><code>import { useState } from 'react';
+import { TextField } from '@mui/material';
+
+function MyForm() {
+  const [name, setName] = useState('');
+
+  return (
+    &lt;TextField
+      label=&quot;Your Name&quot;
+      variant=&quot;outlined&quot;
+      value={name}
+      onChange={(e) =&gt; setName(e.target.value)}
+    /&gt;
+  );
+}
+</code></pre>
+<p><strong>how different input types-for password,numers,email used</strong></p>
+<pre><code>&lt;TextField label=&quot;Password&quot; type=&quot;password&quot; /&gt;
+&lt;TextField label=&quot;Email&quot; type=&quot;email&quot; /&gt;
+&lt;TextField label=&quot;Age&quot; type=&quot;number&quot; /&gt;
+</code></pre>
+<p><strong>showing errors and helper text</strong></p>
+<pre><code>&lt;TextField
+  label=&quot;Email&quot;
+  type=&quot;email&quot;
+  error={true}
+  helperText=&quot;This email is not valid.&quot;
+/&gt;
+</code></pre>
+<p>textarea eqivalent is multiline </p>
+<h4 id="select-autocomplete-and-radio-buttons">Select, Autocomplete, and Radio Buttons</h4>
+<p>Select is a dropdown input that lets the user pick one option from a list.</p>
+<p>exmple</p>
+<pre><code>import { Select, MenuItem, FormControl, InputLabel } from '@mui/material';
+import { useState } from 'react';
+
+function GenderSelect() {
+  const [gender, setGender] = useState('');
+
+  return (
+    &lt;FormControl fullWidth&gt;
+      &lt;InputLabel id=&quot;gender-label&quot;&gt;Gender&lt;/InputLabel&gt;
+      &lt;Select
+        labelId=&quot;gender-label&quot;
+        id=&quot;gender&quot;
+        value={gender}
+        onChange={(e) =&gt; setGender(e.target.value)}
+        label=&quot;Gender&quot;
+      &gt;
+        &lt;MenuItem value=&quot;male&quot;&gt;Male&lt;/MenuItem&gt;
+        &lt;MenuItem value=&quot;female&quot;&gt;Female&lt;/MenuItem&gt;
+        &lt;MenuItem value=&quot;other&quot;&gt;Other&lt;/MenuItem&gt;
+      &lt;/Select&gt;
+    &lt;/FormControl&gt;
+  );
+}
+</code></pre>
+<p><strong>Component Breakdown</strong></p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FormControl</code></td>
+<td>Wraps the field for layout and labeling</td>
+</tr>
+<tr>
+<td><code>InputLabel</code></td>
+<td>Floating label linked by <code>labelId</code></td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td>Dropdown menu control</td>
+</tr>
+<tr>
+<td><code>MenuItem</code></td>
+<td>Each choice inside the select</td>
+</tr>
+</tbody>
+</table>
+<p><em>Autocomplete</em></p>
+<p>Autocomplete is a more powerful select — it allows searching, typing, suggestions, and even free input if allowed.</p>
+<pre><code>import { Autocomplete, TextField } from '@mui/material';
+
+const countries = ['Kenya', 'Tanzania', 'Uganda', 'Ethiopia'];
+
+&lt;Autocomplete
+  options={countries}
+  renderInput={(params) =&gt; (
+    &lt;TextField {...params} label=&quot;Country&quot; variant=&quot;outlined&quot; /&gt;
+  )}
+/&gt;
+</code></pre>
+<p><em>Explanation:</em></p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>options</code></td>
+<td>List of available choices</td>
+</tr>
+<tr>
+<td><code>renderInput</code></td>
+<td>What the field looks like (uses <code>TextField</code>)</td>
+</tr>
+<tr>
+<td><code>{...params}</code></td>
+<td>Autocomplete passes props to your field</td>
+</tr>
+<tr>
+<td><code>label="..."</code></td>
+<td>Label for the input field</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Radio buttons</strong></p>
+<p>Radio lets users pick only one option from a group. Like a Select, but visible on screen.</p>
+<pre><code>import {
+  Radio,
+  RadioGroup,
+  FormControl,
+  FormControlLabel,
+  FormLabel
+} from '@mui/material';
+
+&lt;FormControl&gt;
+  &lt;FormLabel id=&quot;job-type&quot;&gt;Job Type&lt;/FormLabel&gt;
+  &lt;RadioGroup
+    aria-labelledby=&quot;job-type&quot;
+    value={job}
+    onChange={(e) =&gt; setJob(e.target.value)}
+    name=&quot;job&quot;
+    row
+  &gt;
+    &lt;FormControlLabel value=&quot;full&quot; control={&lt;Radio /&gt;} label=&quot;Full-Time&quot; /&gt;
+    &lt;FormControlLabel value=&quot;part&quot; control={&lt;Radio /&gt;} label=&quot;Part-Time&quot; /&gt;
+    &lt;FormControlLabel value=&quot;freelance&quot; control={&lt;Radio /&gt;} label=&quot;Freelance&quot; /&gt;
+  &lt;/RadioGroup&gt;
+&lt;/FormControl&gt;
+</code></pre>
+<p><em>Explanation</em></p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FormControl</code></td>
+<td>Groups label + radio group together</td>
+</tr>
+<tr>
+<td><code>FormLabel</code></td>
+<td>Title for the radio group</td>
+</tr>
+<tr>
+<td><code>RadioGroup</code></td>
+<td>Manages the selected value</td>
+</tr>
+<tr>
+<td><code>FormControlLabel</code></td>
+<td>Wraps each Radio with a label</td>
+</tr>
+<tr>
+<td><code>Radio</code></td>
+<td>The circular selectable input</td>
+</tr>
+<tr>
+<td><code>row</code></td>
+<td>Layout: makes radios appear side by side</td>
+</tr>
+</tbody>
+</table>
+<p><strong>important imports</strong></p>
+<pre><code>import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControl from '@mui/material/FormControl';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormLabel from '@mui/material/FormLabel';
+</code></pre>
+<h4 id="checkboxswitch-and-skiders">Checkbox,Switch and Skiders</h4>
+<p>A checkbox lets users choose yes/no, true/false, or select multiple options.</p>
+<pre><code>import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormGroup from '@mui/material/FormGroup';
+</code></pre>
+<p><strong>A Switch</strong> is like a checkbox, but styled like a mobile on/off toggle.</p>
+<ul>
+<li>
+<p>Used for settings like:</p>
+</li>
+<li>
+<p>Dark mode 🌙 / Light mode ☀️</p>
+</li>
+<li>
+<p>Notifications: On / Off</p>
+</li>
+<li>
+<p>Enable / Disable account</p>
+</li>
+</ul>
+<pre><code>const [darkMode, setDarkMode] = useState(false);
+
+&lt;FormControlLabel
+  control={
+    &lt;Switch
+      checked={darkMode}
+      onChange={(e) =&gt; setDarkMode(e.target.checked)}
+    /&gt;
+  }
+  label=&quot;Enable Dark Mode&quot;
+/&gt;
+</code></pre>
+<p><strong>A slider</strong> lets the user select a number or range of values by sliding a thumb left and right.e.g voumen control,price filter range and ratings or weights.</p>
+<pre><code>const [volume, setVolume] = useState(30);
+
+&lt;Slider
+  value={volume}
+  onChange={(e, newValue) =&gt; setVolume(newValue)}
+  aria-label=&quot;Volume&quot;
+  valueLabelDisplay=&quot;auto&quot;
+  min={0}
+  max={100}
+/&gt;
+</code></pre>
+<pre><code>&lt;Divider sx={{ my: 2 }} /&gt;
+
+</code></pre>
+<p>for creating a horizontal line</p>
+<p><strong>n/b</strong> control is used when working with formcontrollabel but you can use the components such as chechbox,radio button e.t.c alone</p>
+<h3 id="formcontrol-and-formgroup">FormControl and FormGroup.</h3>
+<p>FormControl is a wrapper component that groups together form inputs and their labels, making sure they are styled, aligned, and accessible correctly in Material UI.</p>
+<p><strong>Why Use FormControl?</strong></p>
+<p>Connects inputs and labels correctly for screen readers (accessibility)</p>
+<p>Helps handle error state, helper text, disabled state</p>
+<p>Ensures consistent spacing and alignment</p>
+<p>Works behind the scenes to coordinate MUI form behaviors</p>
+<p><em>props in formcontrol</em></p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fullWidth</code></td>
+<td>Makes the input stretch to fill 100% of its parent</td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td>Disables all child inputs automatically</td>
+</tr>
+<tr>
+<td><code>error</code></td>
+<td>Shows error styling (red underline, red label)</td>
+</tr>
+<tr>
+<td><code>required</code></td>
+<td>Adds an asterisk (*) to label to show it’s required</td>
+</tr>
+<tr>
+<td><code>variant</code></td>
+<td>Sets the style (standard, outlined, filled — passed to children)</td>
+</tr>
+</tbody>
+</table>
+<p>exmple </p>
+<pre><code>import {
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+} from '@mui/material';
+
+&lt;FormControl fullWidth&gt;
+  &lt;InputLabel id=&quot;language-label&quot;&gt;Language&lt;/InputLabel&gt;
+  &lt;Select labelId=&quot;language-label&quot; defaultValue=&quot;&quot;&gt;
+    &lt;MenuItem value=&quot;en&quot;&gt;English&lt;/MenuItem&gt;
+    &lt;MenuItem value=&quot;fr&quot;&gt;French&lt;/MenuItem&gt;
+    &lt;MenuItem value=&quot;sw&quot;&gt;Swahili&lt;/MenuItem&gt;
+  &lt;/Select&gt;
+&lt;/FormControl&gt;
+</code></pre>
+<p><strong>FormGroup</strong> is a container that holds a group of related inputs, like checkboxes or switches, and lays them out vertically or horizontally.</p>
+<p>It is useful when:</p>
+<ul>
+<li>
+<p>You have multiple checkboxes or switches</p>
+</li>
+<li>
+<p>You want to organize them cleanly</p>
+</li>
+<li>
+<p>You want to group them under one label or heading</p>
+</li>
+</ul>
+<p>Example:for uncontrolled states</p>
+<pre><code>import {
+  FormGroup,
+  FormControlLabel,
+  Checkbox,
+  Typography,
+} from '@mui/material';
+
+&lt;FormGroup&gt;
+  &lt;Typography variant=&quot;subtitle1&quot;&gt;Choose Interests&lt;/Typography&gt;
+  &lt;FormControlLabel control={&lt;Checkbox defaultChecked /&gt;} label=&quot;Music&quot; /&gt;
+  &lt;FormControlLabel control={&lt;Checkbox /&gt;} label=&quot;Movies&quot; /&gt;
+  &lt;FormControlLabel control={&lt;Checkbox /&gt;} label=&quot;Coding&quot; /&gt;
+&lt;/FormGroup&gt;
+</code></pre>
+<p>Explanation</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FormGroup</code></td>
+<td>Arranges the checkboxes together</td>
+</tr>
+<tr>
+<td><code>FormControlLabel</code></td>
+<td>Binds label and input together</td>
+</tr>
+<tr>
+<td><code>Checkbox</code></td>
+<td>The actual input (uncontrolled here)</td>
+</tr>
+</tbody>
+</table>
+<p><em>props for formgroup</em></p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>row</code></td>
+<td>If true, aligns all items <strong>horizontally</strong> instead of vertically</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Difference between FormControls and FormGroup</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th><code>FormControl</code></th>
+<th><code>FormGroup</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purpose</td>
+<td>Wraps a single field with logic</td>
+<td>Wraps a set of similar inputs</td>
+</tr>
+<tr>
+<td>Use Case</td>
+<td><code>Select</code>, <code>TextField</code>, <code>RadioGroup</code></td>
+<td><code>Checkbox</code>, <code>Switch</code> collections</td>
+</tr>
+<tr>
+<td>Layout feature</td>
+<td>No layout styling</td>
+<td>Has layout (<code>row</code>, spacing, etc.)</td>
+</tr>
+<tr>
+<td>Props like <code>error</code>, <code>required</code></td>
+<td>✅ Yes</td>
+<td>❌ No (handled per checkbox)</td>
+</tr>
+</tbody>
+</table>
+<p><em>Exmple with controlled state</em></p>
+<pre><code>const [skills, setSkills] = useState({
+  html: false,
+  css: true,
+  js: false,
+});
+
+const handleSkillChange = (e) =&gt; {
+  const { name, checked } = e.target;
+  setSkills((prev) =&gt; ({
+    ...prev,
+    [name]: checked,
+  }));
+};
+
+&lt;FormControl component=&quot;fieldset&quot;&gt;
+  &lt;Typography variant=&quot;h6&quot;&gt;Your Skills&lt;/Typography&gt;
+  &lt;FormGroup row&gt;
+    &lt;FormControlLabel
+      control={
+        &lt;Checkbox
+          name=&quot;html&quot;
+          checked={skills.html}
+          onChange={handleSkillChange}
+        /&gt;
+      }
+      label=&quot;HTML&quot;
+    /&gt;
+    &lt;FormControlLabel
+      control={
+        &lt;Checkbox
+          name=&quot;css&quot;
+          checked={skills.css}
+          onChange={handleSkillChange}
+        /&gt;
+      }
+      label=&quot;CSS&quot;
+    /&gt;
+    &lt;FormControlLabel
+      control={
+        &lt;Checkbox
+          name=&quot;js&quot;
+          checked={skills.js}
+          onChange={handleSkillChange}
+        /&gt;
+      }
+      label=&quot;JavaScript&quot;
+    /&gt;
+  &lt;/FormGroup&gt;
+&lt;/FormControl&gt;
+</code></pre>
+<p><em>Explannation</em></p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FormControl</code></td>
+<td>Wraps label + group of checkboxes</td>
+</tr>
+<tr>
+<td><code>FormGroup</code></td>
+<td>Arranges inputs (row or column)</td>
+</tr>
+<tr>
+<td><code>FormControlLabel</code></td>
+<td>Ties <code>Checkbox</code> to a label</td>
+</tr>
+<tr>
+<td><code>Checkbox</code></td>
+<td>The actual input (controlled via state)</td>
+</tr>
+<tr>
+<td><code>name="js"</code></td>
+<td>Used in <code>handleSkillChange</code> to know which key to update</td>
+</tr>
+<tr>
+<td><code>onChange={...}</code></td>
+<td>Updates the object state (<code>html</code>, <code>css</code>, <code>js</code>)</td>
+</tr>
+</tbody>
+</table>
+<h1 id="handling-form-state-with-formik-or-react-hook-form">Handling Form State (with Formik or React Hook Form)</h1>
+<p><strong>what is Formik?</strong></p>
+<p>Formik is a small library that helps you build forms in React easily, by handling:i.e Formik is a tool that helps you build and manage forms in React without writing too much code.</p>
+<ul>
+<li>
+<p>State (like useState does)</p>
+</li>
+<li>
+<p>Validation</p>
+</li>
+<li>
+<p>Submission</p>
+</li>
+<li>
+<p>Error handling</p>
+</li>
+<li>
+<p>Touch tracking (was this field edited?)</p>
+</li>
+</ul>
+<p><strong>Why Was Formik Created?</strong></p>
+<p>In regular React:</p>
+<ul>
+<li>
+<p>You manage every form input with useState</p>
+</li>
+<li>
+<p>You write custom onChange, onBlur, onSubmit</p>
+</li>
+<li>
+<p>You write your own validation logic</p>
+</li>
+</ul>
+<p>That works... but for big forms, it becomes:</p>
+<p>❌ Messy
+❌ Hard to validate
+❌ Lots of duplicate code
+❌ Tedious for multiple inputs</p>
+<p>📦 Formik was created to make form logic easy and automatic.</p>
+<p>Installation:</p>
+<pre><code>npm install formik
+</code></pre>
+<p>If you want to use validation, also install:</p>
+<pre><code>npm install yup
+</code></pre>
+<p><strong>yup</strong> is a validation library (like grammar rules for form data).
+Formik doesn’t validate by itself — it lets you use libraries like Yup for that.</p>
+<p><a href="https://formik.org/">formik</a></p>
+<p>Example</p>
+<pre><code>import React from 'react';
+import { Formik } from 'formik';
+
+const Basic = () =&gt; (
+  &lt;div&gt;
+    &lt;h1&gt;Anywhere in your app!&lt;/h1&gt;
+    &lt;Formik
+      initialValues={{ email: '', password: '' }}
+      validate={values =&gt; {
+        const errors = {};
+        if (!values.email) {
+          errors.email = 'Required';
+        } else if (
+          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+        ) {
+          errors.email = 'Invalid email address';
+        }
+        return errors;
+      }}
+      onSubmit={(values, { setSubmitting }) =&gt; {
+        setTimeout(() =&gt; {
+          alert(JSON.stringify(values, null, 2));
+          setSubmitting(false);
+        }, 400);
+      }}
+    &gt;
+      {({
+        values,
+        errors,
+        touched,
+        handleChange,
+        handleBlur,
+        handleSubmit,
+        isSubmitting,
+        /* and other goodies */
+      }) =&gt; (
+        &lt;form onSubmit={handleSubmit}&gt;
+          &lt;input
+            type=&quot;email&quot;
+            name=&quot;email&quot;
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.email}
+          /&gt;
+          {errors.email &amp;&amp; touched.email &amp;&amp; errors.email}
+          &lt;input
+            type=&quot;password&quot;
+            name=&quot;password&quot;
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.password}
+          /&gt;
+          {errors.password &amp;&amp; touched.password &amp;&amp; errors.password}
+          &lt;button type=&quot;submit&quot; disabled={isSubmitting}&gt;
+            Submit
+          &lt;/button&gt;
+        &lt;/form&gt;
+      )}
+    &lt;/Formik&gt;
+  &lt;/div&gt;
+);
+
+export default Basic;
+</code></pre>
+<p><strong>Reducing boilerplate</strong></p>
+<p>The code above is very explicit about exactly what Formik is doing. onChange -&gt; handleChange, onBlur -&gt; handleBlur, and so on. However, to save you time, Formik comes with a few extra components to make life easier and less verbose: <Form />, <Field />, and <ErrorMessage />. They use React context to hook into the parent <Formik /> state/methods.</p>
+<p>Exmple:</p>
+<pre><code>// Render Prop
+import React from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+
+const Basic = () =&gt; (
+  &lt;div&gt;
+    &lt;h1&gt;Any place in your app!&lt;/h1&gt;
+    &lt;Formik
+      initialValues={{ email: '', password: '' }}
+      validate={values =&gt; {
+        const errors = {};
+        if (!values.email) {
+          errors.email = 'Required';
+        } else if (
+          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+        ) {
+          errors.email = 'Invalid email address';
+        }
+        return errors;
+      }}
+      onSubmit={(values, { setSubmitting }) =&gt; {
+        setTimeout(() =&gt; {
+          alert(JSON.stringify(values, null, 2));
+          setSubmitting(false);
+        }, 400);
+      }}
+    &gt;
+      {({ isSubmitting }) =&gt; (
+        &lt;Form&gt;
+          &lt;Field type=&quot;email&quot; name=&quot;email&quot; /&gt;
+          &lt;ErrorMessage name=&quot;email&quot; component=&quot;div&quot; /&gt;
+          &lt;Field type=&quot;password&quot; name=&quot;password&quot; /&gt;
+          &lt;ErrorMessage name=&quot;password&quot; component=&quot;div&quot; /&gt;
+          &lt;button type=&quot;submit&quot; disabled={isSubmitting}&gt;
+            Submit
+          &lt;/button&gt;
+        &lt;/Form&gt;
+      )}
+    &lt;/Formik&gt;
+  &lt;/div&gt;
+);
+
+export default Basic;
+</code></pre>
+<p><strong>Core Concept in Formik</strong></p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>What It Means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>initialValues</code></td>
+<td>The starting/default values for your form fields</td>
+</tr>
+<tr>
+<td><code>validationSchema</code></td>
+<td>A <code>Yup</code> object that defines rules for each field (e.g., email must be valid)</td>
+</tr>
+<tr>
+<td><code>onSubmit</code></td>
+<td>Function to run when the form is submitted</td>
+</tr>
+<tr>
+<td><code>handleChange</code></td>
+<td>Function that updates the field's value (same as <code>onChange</code>)</td>
+</tr>
+<tr>
+<td><code>handleBlur</code></td>
+<td>Marks the field as "touched" (used for when to show error messages)</td>
+</tr>
+<tr>
+<td><code>handleSubmit</code></td>
+<td>Function that handles form submission logic</td>
+</tr>
+<tr>
+<td><code>values</code></td>
+<td>An object containing all the current values entered by the user</td>
+</tr>
+<tr>
+<td><code>errors</code></td>
+<td>Object containing validation errors</td>
+</tr>
+<tr>
+<td><code>touched</code></td>
+<td>Tracks which fields the user has interacted with</td>
+</tr>
+</tbody>
+</table>
+<p>Example with full core componets:</p>
+<pre><code>import { Formik } from 'formik';
+import * as Yup from 'yup';
+import { TextField, Button, Typography } from '@mui/material';
+
+&lt;Formik
+  initialValues={{ name: '', email: '' }}
+  validationSchema={Yup.object({
+    name: Yup.string().required('Name is required'),
+    email: Yup.string().email('Invalid email').required('Email is required'),
+  })}
+  onSubmit={(values) =&gt; {
+    console.log(values); // handle your data
+  }}
+&gt;
+  {({
+    handleSubmit,
+    handleChange,
+    handleBlur,
+    values,
+    errors,
+    touched,
+  }) =&gt; (
+    &lt;form onSubmit={handleSubmit}&gt;
+      &lt;TextField
+        name=&quot;name&quot;
+        label=&quot;Name&quot;
+        value={values.name}
+        onChange={handleChange}
+        onBlur={handleBlur}
+        error={touched.name &amp;&amp; Boolean(errors.name)}
+        helperText={touched.name &amp;&amp; errors.name}
+        fullWidth
+        margin=&quot;normal&quot;
+      /&gt;
+
+      &lt;TextField
+        name=&quot;email&quot;
+        label=&quot;Email&quot;
+        value={values.email}
+        onChange={handleChange}
+        onBlur={handleBlur}
+        error={touched.email &amp;&amp; Boolean(errors.email)}
+        helperText={touched.email &amp;&amp; errors.email}
+        fullWidth
+        margin=&quot;normal&quot;
+      /&gt;
+
+      &lt;Button type=&quot;submit&quot; variant=&quot;contained&quot;&gt;
+        Submit
+      &lt;/Button&gt;
+    &lt;/form&gt;
+  )}
+&lt;/Formik&gt;
+</code></pre>
+<p>Example 2</p>
+<pre><code>import React from 'react';
+import { Formik } from 'formik';
+import * as Yup from 'yup';
+import {
+  TextField,
+  Checkbox,
+  Switch,
+  Slider,
+  FormControlLabel,
+  Button,
+  Box,
+  Paper,
+  Typography,
+  Divider,
+} from '@mui/material';
+
+const PreferencesForm = () =&gt; {
+  return (
+    &lt;Paper elevation={3} sx={{ maxWidth: 500, mx: 'auto', mt: 5, p: 4 }}&gt;
+      &lt;Typography variant=&quot;h5&quot; gutterBottom&gt;
+        User Preferences
+      &lt;/Typography&gt;
+
+      &lt;Formik
+        initialValues={{
+          fullName: '',
+          subscribe: false,
+          notifications: true,
+          volume: 30,
+        }}
+        validationSchema={Yup.object({
+          fullName: Yup.string()
+            .min(2, 'Too short')
+            .required('Full Name is required'),
+        })}
+        onSubmit={(values) =&gt; {
+          console.log('Submitted Values:', values);
+        }}
+      &gt;
+        {({
+          values,
+          handleChange,
+          handleBlur,
+          handleSubmit,
+          setFieldValue,
+          touched,
+          errors,
+        }) =&gt; (
+          &lt;form onSubmit={handleSubmit}&gt;
+            {/* TextField */}
+            &lt;TextField
+              fullWidth
+              label=&quot;Full Name&quot;
+              name=&quot;fullName&quot;
+              value={values.fullName}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              error={touched.fullName &amp;&amp; Boolean(errors.fullName)}
+              helperText={touched.fullName &amp;&amp; errors.fullName}
+              margin=&quot;normal&quot;
+            /&gt;
+
+            {/* Checkbox */}
+            &lt;FormControlLabel
+              control={
+                &lt;Checkbox
+                  name=&quot;subscribe&quot;
+                  checked={values.subscribe}
+                  onChange={handleChange}
+                /&gt;
+              }
+              label=&quot;Subscribe to newsletter&quot;
+            /&gt;
+
+            {/* Switch */}
+            &lt;FormControlLabel
+              control={
+                &lt;Switch
+                  name=&quot;notifications&quot;
+                  checked={values.notifications}
+                  onChange={handleChange}
+                /&gt;
+              }
+              label=&quot;Enable Notifications&quot;
+            /&gt;
+
+            &lt;Divider sx={{ my: 3 }} /&gt;
+
+            {/* Slider */}
+            &lt;Typography gutterBottom&gt;
+              Volume: {values.volume}%
+            &lt;/Typography&gt;
+            &lt;Slider
+              name=&quot;volume&quot;
+              value={values.volume}
+              onChange={(e, val) =&gt; setFieldValue('volume', val)}
+              min={0}
+              max={100}
+              step={10}
+              valueLabelDisplay=&quot;auto&quot;
+            /&gt;
+
+            &lt;Button
+              type=&quot;submit&quot;
+              variant=&quot;contained&quot;
+              color=&quot;primary&quot;
+              fullWidth
+              sx={{ mt: 3 }}
+            &gt;
+              Save Preferences
+            &lt;/Button&gt;
+          &lt;/form&gt;
+        )}
+      &lt;/Formik&gt;
+    &lt;/Paper&gt;
+  );
+};
+
+export default PreferencesForm;
+</code></pre>
+<p><strong>React Hook Form</strong></p>
+<p>React Hook Form (RHF) is a library that lets you build and validate forms in React with less code and better performance.</p>
+<p>It uses:</p>
+<ul>
+<li>
+<p>React hooks (useForm, Controller)</p>
+</li>
+<li>
+<p>Smart re-rendering logic</p>
+</li>
+<li>
+<p>Works with any UI library, including Material UI</p>
+</li>
+</ul>
+<p><em>comparison with formik</em></p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Formik</th>
+<th>React Hook Form</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Re-renders</td>
+<td>More (every change triggers re-render)</td>
+<td>Fewer (re-renders only changed inputs)</td>
+</tr>
+<tr>
+<td>Setup</td>
+<td>Easy but more verbose</td>
+<td>Minimal, clean, efficient</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Yup (external)</td>
+<td>Yup (also supported)</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>Slower in large forms</td>
+<td>Faster and more scalable</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>Manual binding</td>
+<td>Use <code>Controller</code> for external inputs</td>
+</tr>
+</tbody>
+</table>
+<pre><code>npm install react-hook-form
+npm install @hookform/resolvers yup
+</code></pre>
+<p><em>Core concepts in RHF</em></p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>useForm()</code></td>
+<td>Hook that creates and manages the form</td>
+</tr>
+<tr>
+<td><code>register()</code></td>
+<td>Connects native HTML inputs to RHF</td>
+</tr>
+<tr>
+<td><code>Controller</code></td>
+<td>Connects <strong>external inputs</strong> like Material UI (TextField, Slider)</td>
+</tr>
+<tr>
+<td><code>handleSubmit()</code></td>
+<td>Function that processes form submission</td>
+</tr>
+<tr>
+<td><code>formState</code></td>
+<td>Gives you access to <code>errors</code>, <code>touchedFields</code>, <code>isDirty</code>, etc.</td>
+</tr>
+<tr>
+<td><code>setValue()</code></td>
+<td>Allows manual setting of field values</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code>import {
+  useForm,
+  Controller
+} from 'react-hook-form';
+import {
+  TextField,
+  Checkbox,
+  Switch,
+  Slider,
+  Button,
+  FormControlLabel,
+  Paper,
+  Typography,
+  Divider,
+} from '@mui/material';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as Yup from 'yup';
+
+const validationSchema = Yup.object({
+  fullName: Yup.string().required('Full name is required'),
+});
+
+export default function RHFForm() {
+  const {
+    control,
+    handleSubmit,
+    register,
+    formState: { errors }
+  } = useForm({
+    defaultValues: {
+      fullName: '',
+      subscribe: false,
+      notifications: true,
+      volume: 40
+    },
+    resolver: yupResolver(validationSchema)
+  });
+
+  const onSubmit = (data) =&gt; {
+    console.log('Submitted:', data);
+  };
+
+  return (
+    &lt;Paper elevation={4} sx={{ p: 4, maxWidth: 500, mx: 'auto', mt: 5 }}&gt;
+      &lt;Typography variant=&quot;h5&quot; gutterBottom&gt;
+        React Hook Form - User Preferences
+      &lt;/Typography&gt;
+
+      &lt;form onSubmit={handleSubmit(onSubmit)}&gt;
+
+        {/* TextField */}
+        &lt;Controller
+          name=&quot;fullName&quot;
+          control={control}
+          render={({ field }) =&gt; (
+            &lt;TextField
+              label=&quot;Full Name&quot;
+              fullWidth
+              margin=&quot;normal&quot;
+              {...field}
+              error={Boolean(errors.fullName)}
+              helperText={errors.fullName?.message}
+            /&gt;
+          )}
+        /&gt;
+
+        {/* Checkbox */}
+        &lt;Controller
+          name=&quot;subscribe&quot;
+          control={control}
+          render={({ field }) =&gt; (
+            &lt;FormControlLabel
+              control={&lt;Checkbox {...field} checked={field.value} /&gt;}
+              label=&quot;Subscribe to newsletter&quot;
+            /&gt;
+          )}
+        /&gt;
+
+        {/* Switch */}
+        &lt;Controller
+          name=&quot;notifications&quot;
+          control={control}
+          render={({ field }) =&gt; (
+            &lt;FormControlLabel
+              control={&lt;Switch {...field} checked={field.value} /&gt;}
+              label=&quot;Enable Notifications&quot;
+            /&gt;
+          )}
+        /&gt;
+
+        &lt;Divider sx={{ my: 3 }} /&gt;
+
+        {/* Slider */}
+        &lt;Typography gutterBottom&gt;
+          Volume: &lt;strong&gt;{control._formValues.volume}%&lt;/strong&gt;
+        &lt;/Typography&gt;
+        &lt;Controller
+          name=&quot;volume&quot;
+          control={control}
+          render={({ field }) =&gt; (
+            &lt;Slider
+              value={field.value}
+              onChange={(_, val) =&gt; field.onChange(val)}
+              min={0}
+              max={100}
+              step={10}
+              valueLabelDisplay=&quot;auto&quot;
+            /&gt;
+          )}
+        /&gt;
+
+        &lt;Button type=&quot;submit&quot; variant=&quot;contained&quot; fullWidth sx={{ mt: 3 }}&gt;
+          Submit Preferences
+        &lt;/Button&gt;
+      &lt;/form&gt;
+    &lt;/Paper&gt;
+  );
+}
+</code></pre>
+<h1 id="navigation-components">Navigation Components</h1>
+<p><strong>AppBar and ToolBar</strong></p>
+<p><em>AppBar</em> is a Material UI component used to create a top bar in your application — like a navigation header or site title bar.</p>
+<p>It usually contains:</p>
+<ul>
+<li>
+<p>The site title or logo</p>
+</li>
+<li>
+<p>Navigation buttons (like “Home”, “Profile”)</p>
+</li>
+<li>
+<p>Sometimes menus, icons, or a search bar</p>
+</li>
+</ul>
+<p>Think of it like the "top bar" you see in all apps or websites.</p>
+<p><strong>Toolbar</strong> is a flexible container inside the AppBar used to align and space its content (like title, buttons, menus, etc.).</p>
+<p>It behaves like a box that arranges children horizontally, with padding and spacing.</p>
+<p>Example:</p>
+<pre><code>import { AppBar, Toolbar, Typography } from '@mui/material';
+
+&lt;AppBar position=&quot;static&quot;&gt;
+  &lt;Toolbar&gt;
+    &lt;Typography variant=&quot;h6&quot;&gt;
+      My App
+    &lt;/Typography&gt;
+  &lt;/Toolbar&gt;
+&lt;/AppBar&gt;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AppBar</code></td>
+<td>Main top bar container (like a nav wrapper)</td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>Controls if it’s fixed, sticky, absolute, or static</td>
+</tr>
+<tr>
+<td><code>Toolbar</code></td>
+<td>Holds the actual content (title, icons, buttons)</td>
+</tr>
+<tr>
+<td><code>Typography</code></td>
+<td>Used here as the app’s title (like <code>&lt;h1&gt;</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Properties</strong></p>
+<p>postion prop: staic,fixed,absolute,sticky</p>
+<p>color prop:primary,secondary,inherit,transparent</p>
+<p><strong>Drawer (Sidebar Navigation)</strong></p>
+<p>A Drawer is a panel (like a sidebar) that slides in from the side of the screen.
+It's used for navigation or menu content, especially on mobile or dashboard apps.</p>
+<p><em>Components</em></p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Drawer</code></td>
+<td>The sliding panel itself</td>
+</tr>
+<tr>
+<td><code>List</code></td>
+<td>Wraps all menu items</td>
+</tr>
+<tr>
+<td><code>ListItem</code>, <code>ListItemButton</code></td>
+<td>Each row inside the drawer (like “Home”, “About”)</td>
+</tr>
+<tr>
+<td><code>ListItemText</code></td>
+<td>The label inside the row</td>
+</tr>
+<tr>
+<td><code>IconButton</code></td>
+<td>The menu button (usually in the AppBar)</td>
+</tr>
+<tr>
+<td><code>MenuIcon</code></td>
+<td>The hamburger icon (☰)</td>
+</tr>
+</tbody>
+</table>
+<p><em>Types of Drawer (Controlled by variant prop)</em></p>
+<p>Material UI gives three types of Drawer based on how they behave:</p>
+<table>
+<thead>
+<tr>
+<th>Variant</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>temporary</code></td>
+<td>Slides over the page. Disappears when user clicks outside (default)</td>
+</tr>
+<tr>
+<td><code>permanent</code></td>
+<td>Always visible. Used in dashboards (like Gmail sidebar)</td>
+</tr>
+<tr>
+<td><code>persistent</code></td>
+<td>Slides in and <strong>stays open</strong> until manually closed</td>
+</tr>
+</tbody>
+</table>
+<pre><code>&lt;Drawer variant=&quot;temporary&quot; /&gt;
+&lt;Drawer variant=&quot;permanent&quot; /&gt;
+&lt;Drawer variant=&quot;persistent&quot; /&gt;
+</code></pre>
+<p><em>Props for Drawer</em></p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Type</th>
+<th>Description</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>anchor</code></td>
+<td>`'left'</td>
+<td>'right'</td>
+<td>'top'</td>
+<td>'bottom'`</td>
+<td>Side from which drawer slides in</td>
+</tr>
+<tr>
+<td><code>open</code></td>
+<td><code>boolean</code></td>
+<td>Controls whether drawer is open or not (used with state)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>onClose</code></td>
+<td><code>function</code></td>
+<td>Function called when drawer should close (like when clicking background)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>variant</code></td>
+<td>string</td>
+<td><code>"temporary"</code> (default), <code>"persistent"</code>, or <code>"permanent"</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>sx</code></td>
+<td>object</td>
+<td>Inline styling (background, width, etc.)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PaperProps</code></td>
+<td>object</td>
+<td>Style the inside surface of the drawer (<code>backgroundColor</code>, etc.)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>What Components Go Inside a Drawer</em></p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Box</code></td>
+<td>Wraps the content and sets drawer width</td>
+</tr>
+<tr>
+<td><code>List</code></td>
+<td>Vertical container for navigation links</td>
+</tr>
+<tr>
+<td><code>ListItem</code></td>
+<td>Represents one row (like one link)</td>
+</tr>
+<tr>
+<td><code>ListItemButton</code></td>
+<td>Makes <code>ListItem</code> clickable</td>
+</tr>
+<tr>
+<td><code>ListItemIcon</code></td>
+<td>Adds an icon to the left of the text</td>
+</tr>
+<tr>
+<td><code>ListItemText</code></td>
+<td>Displays the label (like “Home”, “About”)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Styling Drawer</strong></p>
+<pre><code>&lt;Drawer
+  sx={{ '&amp; .MuiDrawer-paper': { width: 250, backgroundColor: '#111' } }}
+  open={open}
+&gt;
+</code></pre>
+<ul>
+<li>
+<p><em>&amp; .MuiDrawer</em>-paper targets the inner part (the sliding sheet)</p>
+</li>
+<li>
+<p>You can also use PaperProps to style:</p>
+</li>
+</ul>
+<pre><code>&lt;Drawer PaperProps={{ sx: { backgroundColor: 'blue' } }} /&gt;
+</code></pre>
+<p>To show/hide the drawer ,you use react state</p>
+<pre><code>const [open, setOpen] = useState(false);
+
+// open
+setOpen(true);
+
+// close (e.g., after clicking background)
+setOpen(false);
+</code></pre>
+<p>Then pass the states </p>
+<p>```
+ <Drawer open={open} onClose={() => setOpen(false)} /&gt;</p>
+<pre><code>
+Example
+
+```bash
+import React, { useState } from 'react';
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Box,
+} from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+
+export default function SidebarDrawer() {
+  const [open, setOpen] = useState(false); // state controls visibility
+  const menuItems = ['Home', 'About', 'Portfolio', 'Contact'];
+
+  return (
+    &lt;&gt;
+      {/* Top Navigation Bar */}
+      &lt;AppBar position=&quot;static&quot;&gt;
+        &lt;Toolbar&gt;
+          &lt;IconButton edge=&quot;start&quot; color=&quot;inherit&quot; onClick={() =&gt; setOpen(true)}&gt;
+            &lt;MenuIcon /&gt;
+          &lt;/IconButton&gt;
+
+          &lt;Typography variant=&quot;h6&quot; sx={{ flexGrow: 1 }}&gt;
+            MySite
+          &lt;/Typography&gt;
+        &lt;/Toolbar&gt;
+      &lt;/AppBar&gt;
+
+      {/* Drawer (Sidebar) */}
+      &lt;Drawer
+        anchor=&quot;left&quot;
+        open={open}
+        onClose={() =&gt; setOpen(false)}
+        PaperProps={{
+          sx: { width: 250, backgroundColor: '#f4f4f4' },
+        }}
+      &gt;
+        &lt;Box role=&quot;presentation&quot; onClick={() =&gt; setOpen(false)}&gt;
+          &lt;List&gt;
+            {menuItems.map((text) =&gt; (
+              &lt;ListItem key={text} disablePadding&gt;
+                &lt;ListItemButton&gt;
+                  &lt;ListItemText primary={text} /&gt;
+                &lt;/ListItemButton&gt;
+              &lt;/ListItem&gt;
+            ))}
+          &lt;/List&gt;
+        &lt;/Box&gt;
+      &lt;/Drawer&gt;
+    &lt;/&gt;
+  );
+}
+</code></pre>
+<p><strong>What Is BottomNavigation?</strong></p>
+<p>BottomNavigation is a horizontal bar placed at the bottom of the screen that lets users switch between different views or sections — like tabs for mobile apps.</p>
+<p><em>Related Components in BottomNavigation</em></p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BottomNavigation</code></td>
+<td>The main bar container</td>
+</tr>
+<tr>
+<td><code>BottomNavigationAction</code></td>
+<td>Represents one tab (e.g., "Home", "Search")</td>
+</tr>
+</tbody>
+</table>
+<p><em>props for BottomNavigation</em></p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code></td>
+<td>number</td>
+<td>The index of the selected tab</td>
+</tr>
+<tr>
+<td><code>onChange</code></td>
+<td>function</td>
+<td>Called when a tab is clicked. You update the state</td>
+</tr>
+<tr>
+<td><code>showLabels</code></td>
+<td>boolean</td>
+<td>If true, labels are always shown. If false, only show when selected</td>
+</tr>
+</tbody>
+</table>
+<p><em>props for BottomNavigationAction</em></p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>label</code></td>
+<td>string</td>
+<td>The name under the icon</td>
+</tr>
+<tr>
+<td><code>icon</code></td>
+<td>ReactNode</td>
+<td>Usually a Material Icon</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td>string/number</td>
+<td>Optional ID of this action</td>
+</tr>
+<tr>
+<td><code>sx</code></td>
+<td>object</td>
+<td>For styling spacing, color, etc.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What are TABS</strong></p>
+<p>Tabs allow users to switch between different sections of content on the same page — usually seen at the top of a card, panel, or view.</p>
+<p>What Tabs Do:</p>
+<ul>
+<li>
+<p>Show multiple sections under a single view</p>
+</li>
+<li>
+<p>Only one section is visible at a time</p>
+</li>
+<li>
+<p>Clicking a tab updates the visible content</p>
+</li>
+</ul>
+<p><em>Related Components for Tabs</em></p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Tabs</code></td>
+<td>Wraps all tab labels</td>
+</tr>
+<tr>
+<td><code>Tab</code></td>
+<td>Represents each clickable tab</td>
+</tr>
+<tr>
+<td><code>TabPanel</code></td>
+<td>(Manual) A box to hold the content under a tab</td>
+</tr>
+<tr>
+<td><code>Box</code></td>
+<td>Used for layout and spacing</td>
+</tr>
+</tbody>
+</table>
+<p><strong>important Props for Tabs</strong></p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code></td>
+<td>Which tab is currently selected (a number)</td>
+</tr>
+<tr>
+<td><code>onChange</code></td>
+<td>Function called when tab changes</td>
+</tr>
+<tr>
+<td><code>indicatorColor</code></td>
+<td>Color of the underline under active tab</td>
+</tr>
+<tr>
+<td><code>textColor</code></td>
+<td>Color of tab text (<code>inherit</code>, <code>primary</code>, <code>secondary</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><em>Exmple:Combined tabs and BottomNavigation</em></p>
+<pre><code class="language-bash">import React, { useState } from 'react';
+import {
+  Tabs,
+  Tab,
+  Box,
+  Typography,
+  BottomNavigation,
+  BottomNavigationAction,
+  Paper
+} from '@mui/material';
+import HomeIcon from '@mui/icons-material/Home';
+import PersonIcon from '@mui/icons-material/Person';
+import SettingsIcon from '@mui/icons-material/Settings';
+
+export default function TabAndBottomNavExample() {
+  const [tabIndex, setTabIndex] = useState(0);
+  const [bottomNav, setBottomNav] = useState(0);
+
+  return (
+    &lt;&gt;
+      {/* Tabs at the Top */}
+      &lt;Box sx={{ width: '100%', bgcolor: 'background.paper' }}&gt;
+        &lt;Tabs value={tabIndex} onChange={(e, newVal) =&gt; setTabIndex(newVal)} centered&gt;
+          &lt;Tab label=&quot;Posts&quot; /&gt;
+          &lt;Tab label=&quot;Media&quot; /&gt;
+          &lt;Tab label=&quot;Mentions&quot; /&gt;
+        &lt;/Tabs&gt;
+
+        {tabIndex === 0 &amp;&amp; &lt;TabPanel&gt;Posts content&lt;/TabPanel&gt;}
+        {tabIndex === 1 &amp;&amp; &lt;TabPanel&gt;Media content&lt;/TabPanel&gt;}
+        {tabIndex === 2 &amp;&amp; &lt;TabPanel&gt;Mentions content&lt;/TabPanel&gt;}
+      &lt;/Box&gt;
+
+      {/* Bottom Navigation */}
+      &lt;Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}&gt;
+        &lt;BottomNavigation
+          value={bottomNav}
+          onChange={(e, newVal) =&gt; setBottomNav(newVal)}
+          showLabels
+        &gt;
+          &lt;BottomNavigationAction label=&quot;Home&quot; icon={&lt;HomeIcon /&gt;} /&gt;
+          &lt;BottomNavigationAction label=&quot;Profile&quot; icon={&lt;PersonIcon /&gt;} /&gt;
+          &lt;BottomNavigationAction label=&quot;Settings&quot; icon={&lt;SettingsIcon /&gt;} /&gt;
+        &lt;/BottomNavigation&gt;
+      &lt;/Paper&gt;
+    &lt;/&gt;
+  );
+}
+
+// TabPanel: simple content wrapper
+function TabPanel({ children }) {
+  return (
+    &lt;Box sx={{ p: 3 }}&gt;
+      &lt;Typography&gt;{children}&lt;/Typography&gt;
+    &lt;/Box&gt;
+  );
+}
+</code></pre>
+<h5 id="what-are-breadcrumbs">What Are Breadcrumbs?</h5>
+<p>Breadcrumbs are a navigation aid that shows users their current location in a site's hierarchy — like a trail that shows where you came from.</p>
+<p>Example:</p>
+<p>You might see this on a shopping site like Amazon:</p>
+<pre><code>Home / Electronics / Computers / Laptops
+</code></pre>
+<p>Each part is clickable, helping the user navigate back to higher-level categories.</p>
+<p><em>Why Use Breadcrumbs?</em></p>
+<ul>
+<li>
+<p>Show users where they are inside your app</p>
+</li>
+<li>
+<p>Let them easily go back to a parent page</p>
+</li>
+<li>
+<p>Helps with SEO and accessibility too</p>
+</li>
+</ul>
+<p><strong>Components involved in Breadcrumbs</strong></p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Breadcrumbs</code></td>
+<td>The wrapper that handles the layout and separator</td>
+</tr>
+<tr>
+<td><code>Link</code> (MUI)</td>
+<td>Used for clickable items (e.g. “Home”)</td>
+</tr>
+<tr>
+<td><code>Typography</code></td>
+<td>Used for the <strong>current page</strong> (non-clickable)</td>
+</tr>
+<tr>
+<td><code>NavigateNextIcon</code></td>
+<td>The arrow used as the default separator (&gt;)</td>
+</tr>
+</tbody>
+</table>
+<p><em>Props for Breadcrumbs</em></p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>separator</code></td>
+<td>node/string</td>
+<td>What to show between items (default is <code>/</code> or <code>&gt;</code> icon)</td>
+</tr>
+<tr>
+<td><code>aria-label</code></td>
+<td>string</td>
+<td>Used for accessibility (e.g. <code>"breadcrumb"</code>)</td>
+</tr>
+<tr>
+<td><code>maxItems</code></td>
+<td>number</td>
+<td>Collapses items if too many (e.g., shows <code>...</code>)</td>
+</tr>
+<tr>
+<td><code>itemsBeforeCollapse</code></td>
+<td>number</td>
+<td>How many to show before collapse (if <code>maxItems</code> is used)</td>
+</tr>
+<tr>
+<td><code>itemsAfterCollapse</code></td>
+<td>number</td>
+<td>How many to show after the collapse</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code>import React from 'react';
+import { Breadcrumbs, Link, Typography } from '@mui/material';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+
+export default function BreadcrumbNav() {
+  return (
+    &lt;Breadcrumbs
+      separator={&lt;NavigateNextIcon fontSize=&quot;small&quot; /&gt;}
+      aria-label=&quot;breadcrumb&quot;
+    &gt;
+      &lt;Link underline=&quot;hover&quot; color=&quot;inherit&quot; href=&quot;/&quot;&gt;
+        Home
+      &lt;/Link&gt;
+      &lt;Link underline=&quot;hover&quot; color=&quot;inherit&quot; href=&quot;/blog&quot;&gt;
+        Blog
+      &lt;/Link&gt;
+      &lt;Link underline=&quot;hover&quot; color=&quot;inherit&quot; href=&quot;/blog/articles&quot;&gt;
+        Articles
+      &lt;/Link&gt;
+      &lt;Typography color=&quot;text.primary&quot;&gt;How to Use Breadcrumbs&lt;/Typography&gt;
+    &lt;/Breadcrumbs&gt;
+  );
+}
+</code></pre>
+<p><em>note:</em> You can change separator to anything</p>
+<pre><code>separator=&quot;•&quot;   // bullet
+separator=&quot;→&quot;   // arrow
+</code></pre>
+<h5 id="link-and-buttonlink-usage-in-material-ui">Link and ButtonLink Usage in Material UI</h5>
+<p><strong>link</strong></p>
+<p>Material UI’s Link is a component used to create text-based navigation links that look like normal links but are styled using Material UI's theme. It’s like an improved <a> tag with theme awareness and better styling.</p>
+<p><em>You can use it for:</em></p>
+<ul>
+<li>
+<p>Navigating between pages (using href)</p>
+</li>
+<li>
+<p>Navigating inside an app (with React Router)</p>
+</li>
+<li>
+<p>Styling links that look consistent with the Material theme</p>
+</li>
+</ul>
+<p><strong>Note</strong> Don’t confuse it with React Router’s Link!</p>
+<table>
+<thead>
+<tr>
+<th><code>@mui/material/Link</code></th>
+<th>Use for <strong>style + links</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>react-router-dom/Link</code></td>
+<td>Use for <strong>client-side routing</strong> in React Router</td>
+</tr>
+</tbody>
+</table>
+<p><em>All Important Props for MUI Link</em></p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>href</code></td>
+<td>string</td>
+<td>Destination path (like in <code>&lt;a href=""&gt;</code>)</td>
+</tr>
+<tr>
+<td><code>underline</code></td>
+<td>string</td>
+<td><code>'always'</code>, <code>'hover'</code>, <code>'none'</code> — controls how underline appears</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>string</td>
+<td><code>'primary'</code>, <code>'secondary'</code>, <code>'inherit'</code>, <code>'textPrimary'</code>, etc.</td>
+</tr>
+<tr>
+<td><code>component</code></td>
+<td>ReactType</td>
+<td>Allows replacing it with <code>react-router-dom</code>'s <code>Link</code> for routing</td>
+</tr>
+<tr>
+<td><code>sx</code></td>
+<td>object</td>
+<td>Style overrides (padding, margin, fontSize, etc.)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How to Make MUI Link Work With React Router?</strong></p>
+<p>If you're using React Router, and want a client-side link (no page reload), you need to do:</p>
+<pre><code>import { Link as RouterLink } from 'react-router-dom';
+import { Link as MUILink } from '@mui/material';
+
+&lt;MUILink component={RouterLink} to=&quot;/about&quot;&gt;
+  Go to About
+&lt;/MUILink&gt;
+</code></pre>
+<p><strong>What Is a “ButtonLink”?</strong></p>
+<p>A ButtonLink is not a special component — it’s simply using a Button as a link by setting the component="a" or component={RouterLink}.</p>
+<pre><code>&lt;Button component=&quot;a&quot; href=&quot;/docs&quot;&gt;
+  Docs
+&lt;/Button&gt;
+</code></pre>
+<p>Or, with React Router:</p>
+<pre><code>&lt;Button component={RouterLink} to=&quot;/contact&quot;&gt;
+  Contact
+&lt;/Button&gt;
+</code></pre>
+<p><em>Why Use ButtonLink?</em></p>
+<p>You want the look of a button, but it should behave like a link</p>
+<p>Ideal for navigation menus, call-to-actions, etc.</p>
+<p>Example:</p>
+<pre><code>import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
+import { Link, Button, Stack } from '@mui/material';
+
+export default function LinkExample() {
+  return (
+    &lt;Stack spacing={2}&gt;
+      {/* Text-style link using href */}
+      &lt;Link href=&quot;/home&quot; underline=&quot;hover&quot; color=&quot;primary&quot;&gt;
+        Go to Home (classic link)
+      &lt;/Link&gt;
+
+      {/* Text-style link using React Router */}
+      &lt;Link component={RouterLink} to=&quot;/about&quot; color=&quot;secondary&quot; underline=&quot;always&quot;&gt;
+        About Page (router link)
+      &lt;/Link&gt;
+
+      {/* Button that acts as a link (with href) */}
+      &lt;Button variant=&quot;contained&quot; component=&quot;a&quot; href=&quot;/docs&quot;&gt;
+        View Docs
+      &lt;/Button&gt;
+
+      {/* Button link using React Router */}
+      &lt;Button variant=&quot;outlined&quot; component={RouterLink} to=&quot;/contact&quot;&gt;
+        Contact Us
+      &lt;/Button&gt;
+    &lt;/Stack&gt;
+  );
+}
+</code></pre>
+<h1 id="feedback-and-ui-elements">Feedback and UI Elements</h1>
+<h4 id="dialog-modal-in-material-ui">Dialog (Modal) in Material UI</h4>
+<p>A Dialog is a popup (modal) window that appears on top of your content to show important information or ask for a decision.</p>
+<p><em>n/b</em> It blocks interaction with the rest of the UI until the user closes it or responds.</p>
+<p>UseCases:</p>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>Dialog Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>“Are you sure you want to delete?”</td>
+<td>Confirmation prompt</td>
+</tr>
+<tr>
+<td>“Login / Sign Up”</td>
+<td>Shows a form inside a popup</td>
+</tr>
+<tr>
+<td>“Your session has expired”</td>
+<td>Notification of status</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Components Used in a Dialog</strong></p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Dialog</code></td>
+<td>Main wrapper for the popup/modal</td>
+</tr>
+<tr>
+<td><code>DialogTitle</code></td>
+<td>Title bar at the top</td>
+</tr>
+<tr>
+<td><code>DialogContent</code></td>
+<td>Main area inside the dialog — text, forms, etc.</td>
+</tr>
+<tr>
+<td><code>DialogActions</code></td>
+<td>Bottom row for buttons like “Cancel” or “OK”</td>
+</tr>
+<tr>
+<td><code>DialogContentText</code></td>
+<td>Optional helper text within <code>DialogContent</code></td>
+</tr>
+</tbody>
+</table>
+<p>You can use any material ui component inside the dialog component</p>
+<p><strong>Main prop for Dialog</strong></p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Type</th>
+<th>What It Does</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>open</code></td>
+<td><code>boolean</code></td>
+<td>Controls whether the dialog is visible</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>onClose</code></td>
+<td><code>function</code></td>
+<td>Called when user clicks outside or hits Escape</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fullWidth</code></td>
+<td><code>boolean</code></td>
+<td>Makes dialog take full width of its container</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>maxWidth</code></td>
+<td>`'xs'</td>
+<td>'sm'</td>
+<td>'md'</td>
+<td>'lg'</td>
+<td>'xl'</td>
+<td>false`</td>
+<td>Controls dialog size</td>
+</tr>
+<tr>
+<td><code>fullScreen</code></td>
+<td><code>boolean</code></td>
+<td>If true, dialog fills entire screen (good for mobile)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>scroll</code></td>
+<td>`'body'</td>
+<td>'paper'`</td>
+<td>Determines scrolling area inside dialog</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PaperProps</code></td>
+<td><code>object</code></td>
+<td>To style the dialog paper (e.g., backgroundColor)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Dialod | Modal | Alert</em></p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Modal</td>
+<td>Any UI element that blocks the background</td>
+</tr>
+<tr>
+<td>Dialog</td>
+<td>A type of modal used for structured interaction (form, confirm)</td>
+</tr>
+<tr>
+<td>Alert</td>
+<td>Simple notification — often non-blocking (e.g. Snackbar)</td>
+</tr>
+</tbody>
+</table>
+<p>Example:Controlled</p>
+<pre><code>import React, { useState } from 'react';
+import {
+  Button,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+} from '@mui/material';
+
+export default function ConfirmDialog() {
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () =&gt; setOpen(true);
+  const handleClose = () =&gt; setOpen(false);
+  const handleConfirm = () =&gt; {
+    alert('Item deleted!');
+    setOpen(false);
+  };
+
+  return (
+    &lt;&gt;
+      &lt;Button variant=&quot;contained&quot; color=&quot;error&quot; onClick={handleOpen}&gt;
+        Delete
+      &lt;/Button&gt;
+
+      &lt;Dialog open={open} onClose={handleClose}&gt;
+        &lt;DialogTitle&gt;Confirm Delete&lt;/DialogTitle&gt;
+        &lt;DialogContent&gt;
+          &lt;DialogContentText&gt;
+            Are you sure you want to delete this item? This action cannot be undone.
+          &lt;/DialogContentText&gt;
+        &lt;/DialogContent&gt;
+        &lt;DialogActions&gt;
+          &lt;Button onClick={handleClose} color=&quot;primary&quot;&gt;
+            Cancel
+          &lt;/Button&gt;
+          &lt;Button onClick={handleConfirm} color=&quot;error&quot; autoFocus&gt;
+            Delete
+          &lt;/Button&gt;
+        &lt;/DialogActions&gt;
+      &lt;/Dialog&gt;
+    &lt;/&gt;
+  );
+}
+</code></pre>
+<h4 id="snackbar-and-alerts-in-material-ui">Snackbar and Alerts in Material UI</h4>
+<p><strong>What is Snackbar</strong></p>
+<p>A Snackbar is a small popup bar (usually at the bottom of the screen) that shows short messages or notifications.It automatically disappears after a few seconds, but can also be dismissed manually.</p>
+<p>Where You’ve Seen It:
+- “Item added to cart” ,“Message sent” , “Copied to clipboard”</p>
+<p>These are Snackbars — they inform the user about something that just happened.</p>
+<p><strong>Alert</strong></p>
+<p>An Alert is a message box used to show important information, warnings, or errors with different colors and icons.It can be used inside a Snackbar or shown alone in the page layout.</p>
+<p>Example of Alert Types:</p>
+<table>
+<thead>
+<tr>
+<th>Alert Type</th>
+<th>Purpose</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>success</code></td>
+<td>Success or confirmation</td>
+<td>Green</td>
+</tr>
+<tr>
+<td><code>error</code></td>
+<td>Something went wrong</td>
+<td>Red</td>
+</tr>
+<tr>
+<td><code>warning</code></td>
+<td>Caution needed</td>
+<td>Amber</td>
+</tr>
+<tr>
+<td><code>info</code></td>
+<td>Informational</td>
+<td>Blue</td>
+</tr>
+</tbody>
+</table>
+<p><em>Components Involved</em></p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Snackbar</code></td>
+<td>Wrapper for the popup message box</td>
+</tr>
+<tr>
+<td><code>Alert</code></td>
+<td>The message content (can be used inside <code>Snackbar</code>)</td>
+</tr>
+<tr>
+<td><code>AlertTitle</code></td>
+<td>Optional — adds a bold title to the alert</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Snackbar Props</strong></p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>open</code></td>
+<td>boolean</td>
+<td>Controls if it’s visible</td>
+</tr>
+<tr>
+<td><code>onClose</code></td>
+<td>function</td>
+<td>Called when it closes (after timeout or click)</td>
+</tr>
+<tr>
+<td><code>autoHideDuration</code></td>
+<td>number</td>
+<td>Time in ms before auto-dismiss</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>string</td>
+<td>Text shown in the snackbar (basic usage)</td>
+</tr>
+<tr>
+<td><code>anchorOrigin</code></td>
+<td>object</td>
+<td>Controls where the snackbar appears</td>
+</tr>
+<tr>
+<td><code>action</code></td>
+<td>node</td>
+<td>Optional buttons inside (like “Undo”)</td>
+</tr>
+</tbody>
+</table>
+<p>anchorOrigin Format</p>
+<pre><code>anchorOrigin={{
+  vertical: 'top' | 'bottom',
+  horizontal: 'left' | 'center' | 'right'
+}}
+
+</code></pre>
+<pre><code>anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+</code></pre>
+<p><strong>Alert Props</strong></p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>severity</code></td>
+<td>string</td>
+<td><code>error</code>, <code>warning</code>, <code>info</code>, <code>success</code></td>
+</tr>
+<tr>
+<td><code>variant</code></td>
+<td>string</td>
+<td><code>standard</code>, <code>filled</code>, <code>outlined</code></td>
+</tr>
+<tr>
+<td><code>onClose</code></td>
+<td>function</td>
+<td>Closes the alert if dismissible</td>
+</tr>
+<tr>
+<td><code>icon</code></td>
+<td>ReactNode</td>
+<td>Custom icon (optional)</td>
+</tr>
+</tbody>
+</table>
+<p><em>Example full:</em></p>
+<pre><code>import React, { useState } from 'react';
+import {
+  Snackbar,
+  Alert,
+  AlertTitle,
+  Button,
+  Stack
+} from '@mui/material';
+
+export default function SnackbarAlertExample() {
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () =&gt; setOpen(true);
+  const handleClose = (event, reason) =&gt; {
+    if (reason === 'clickaway') return;
+    setOpen(false);
+  };
+
+  return (
+    &lt;Stack spacing={2}&gt;
+      &lt;Button variant=&quot;contained&quot; onClick={handleClick}&gt;
+        Show Success Message
+      &lt;/Button&gt;
+
+      &lt;Snackbar
+        open={open}
+        autoHideDuration={4000}
+        onClose={handleClose}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      &gt;
+        &lt;Alert severity=&quot;success&quot; variant=&quot;filled&quot; onClose={handleClose}&gt;
+          &lt;AlertTitle&gt;Success&lt;/AlertTitle&gt;
+          You have successfully completed the action!
+        &lt;/Alert&gt;
+      &lt;/Snackbar&gt;
+    &lt;/Stack&gt;
+  );
+}
+</code></pre>
+<h4 id="progress-indicators-circular-linear">Progress Indicators (Circular &amp; Linear)</h4>
+<p><strong>Progress</strong> Indicators visually show that something is loading, processing, or ongoing.</p>
+<p>Two Types in Material UI</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Example Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LinearProgress</code></td>
+<td>A horizontal bar that fills left to right</td>
+<td>File upload, page load</td>
+</tr>
+<tr>
+<td><code>CircularProgress</code></td>
+<td>A spinning circle</td>
+<td>Loading spinner, waiting state</td>
+</tr>
+</tbody>
+</table>
+<p><strong>CircularProgress</strong></p>
+<p>A circular spinner that rotates continuously or fills like a pie chart (depending on mode).</p>
+<pre><code>import CircularProgress from '@mui/material/CircularProgress';
+
+</code></pre>
+<p><strong>Main Props for circular progress</strong></p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>color</code></td>
+<td>string</td>
+<td><code>"primary"</code>, <code>"secondary"</code>, <code>"inherit"</code></td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>number</td>
+<td>Diameter in pixels (e.g., <code>40</code>, <code>60</code>, etc.)</td>
+</tr>
+<tr>
+<td><code>thickness</code></td>
+<td>number</td>
+<td>How bold the stroke is (default: <code>3.6</code>)</td>
+</tr>
+<tr>
+<td><code>variant</code></td>
+<td>string</td>
+<td><code>"indeterminate"</code> (default), <code>"determinate"</code></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td>number</td>
+<td>From <code>0</code> to <code>100</code> — used only in determinate</td>
+</tr>
+</tbody>
+</table>
+<p><strong>LinearProgress</strong>
+A horizontal bar that fills from left to right, either endlessly or based on a progress value.</p>
+<pre><code>import LinearProgress from '@mui/material/LinearProgress';
+</code></pre>
+<p><em>Main Props</em></p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>variant</code></td>
+<td>string</td>
+<td><code>"indeterminate"</code> or <code>"determinate"</code></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td>number</td>
+<td>From <code>0</code> to <code>100</code> (used in <code>determinate</code>)</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>string</td>
+<td><code>"primary"</code>, <code>"secondary"</code>, <code>"success"</code> etc.</td>
+</tr>
+<tr>
+<td><code>sx</code></td>
+<td>object</td>
+<td>Styling (e.g., width, margin, background)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Indeterminate</td>
+<td>Spinner or bar keeps looping (unknown duration)</td>
+</tr>
+<tr>
+<td>Determinate</td>
+<td>Fills up based on a value (known percentage)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>when to use what</strong></p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>App is waiting on data load</td>
+<td>Circular (indeterminate)</td>
+</tr>
+<tr>
+<td>Uploading a file (know % done)</td>
+<td>Linear (determinate)</td>
+</tr>
+<tr>
+<td>Showing background task</td>
+<td>Circular (small, corner)</td>
+</tr>
+</tbody>
+</table>
+<p>Example Code:</p>
+<pre><code>import React, { useState, useEffect } from 'react';
+import {
+  Box,
+  CircularProgress,
+  LinearProgress,
+  Typography,
+  Button,
+  Stack
+} from '@mui/material';
+
+export default function ProgressExample() {
+  const [progress, setProgress] = useState(0);
+  const [loading, setLoading] = useState(false);
+
+  const handleStart = () =&gt; {
+    setLoading(true);
+    setProgress(0);
+  };
+
+  useEffect(() =&gt; {
+    if (!loading) return;
+
+    const timer = setInterval(() =&gt; {
+      setProgress((prev) =&gt; {
+        if (prev &gt;= 100) {
+          setLoading(false);
+          clearInterval(timer);
+          return 100;
+        }
+        return prev + 10;
+      });
+    }, 500);
+
+    return () =&gt; clearInterval(timer);
+  }, [loading]);
+
+  return (
+    &lt;Box sx={{ width: '100%', textAlign: 'center', mt: 4 }}&gt;
+      &lt;Stack spacing={2} alignItems=&quot;center&quot;&gt;
+        &lt;Button variant=&quot;contained&quot; onClick={handleStart}&gt;
+          Start Task
+        &lt;/Button&gt;
+
+        {loading ? (
+          &lt;&gt;
+            &lt;CircularProgress color=&quot;primary&quot; /&gt;
+            &lt;LinearProgress
+              variant=&quot;determinate&quot;
+              value={progress}
+              sx={{ width: '60%' }}
+            /&gt;
+            &lt;Typography variant=&quot;body2&quot;&gt;{progress}% completed&lt;/Typography&gt;
+          &lt;/&gt;
+        ) : (
+          &lt;Typography variant=&quot;h6&quot; color=&quot;success.main&quot;&gt;
+            Task complete!
+          &lt;/Typography&gt;
+        )}
+      &lt;/Stack&gt;
+    &lt;/Box&gt;
+  );
+}
+</code></pre>
+<h5 id="backdrop-and-skeleton-loaders">Backdrop and Skeleton Loaders</h5>
+<p>A <strong>Backdrop</strong> is a semi-transparent screen that covers your app and visually blocks interaction.
+It’s usually shown when the app is loading or waiting for a task to complete.</p>
+<p>When to Use a Backdrop</p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Why Use Backdrop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Submitting a form</td>
+<td>Show something is in progress and block clicks</td>
+</tr>
+<tr>
+<td>Loading dashboard data</td>
+<td>Prevent UI interaction until it's ready</td>
+</tr>
+<tr>
+<td>Performing sensitive operations</td>
+<td>Prevent double-submits or errors</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Props for <Backdrop></strong></p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>open</code></td>
+<td><code>boolean</code></td>
+<td>Controls visibility</td>
+</tr>
+<tr>
+<td><code>onClick</code></td>
+<td><code>function</code></td>
+<td>Optional — called when user clicks the backdrop</td>
+</tr>
+<tr>
+<td><code>sx</code></td>
+<td><code>object</code></td>
+<td>Custom inline styles (e.g., color, zIndex, blur)</td>
+</tr>
+<tr>
+<td><code>children</code></td>
+<td><code>node</code></td>
+<td>Optional — you can place a spinner or message inside</td>
+</tr>
+</tbody>
+</table>
+<p><em>Common Pair</em>: Backdrop + CircularProgress
+You’ll often combine Backdrop + CircularProgress to show a centered loading spinner.</p>
+<p>Example:</p>
+<pre><code>import React, { useState } from 'react';
+import { Backdrop, CircularProgress, Button } from '@mui/material';
+
+export default function BackdropExample() {
+  const [open, setOpen] = useState(false);
+
+  const handleToggle = () =&gt; setOpen(!open);
+
+  return (
+    &lt;&gt;
+      &lt;Button onClick={handleToggle} variant=&quot;contained&quot;&gt;
+        {open ? 'Hide' : 'Show'} Backdrop
+      &lt;/Button&gt;
+
+      &lt;Backdrop
+        open={open}
+        sx={{ color: '#fff', zIndex: (theme) =&gt; theme.zIndex.drawer + 1 }}
+      &gt;
+        &lt;CircularProgress color=&quot;inherit&quot; /&gt;
+      &lt;/Backdrop&gt;
+    &lt;/&gt;
+  );
+}
+</code></pre>
+<h4 id="what-is-a-skeleton">What is a Skeleton</h4>
+<p>A Skeleton Loader shows a gray placeholder (like an empty box or line) that mimics the shape of the content while it's loading.</p>
+<p>It improves perceived performance by showing the user something is loading — instead of just an empty white screen.</p>
+<p><em>Props for <Skeleton></em></p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>variant</code></td>
+<td>string</td>
+<td><code>'text'</code>, <code>'rectangular'</code>, <code>'circular'</code></td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td>number or string</td>
+<td>Width of the skeleton</td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td>number or string</td>
+<td>Height of the skeleton</td>
+</tr>
+<tr>
+<td><code>animation</code></td>
+<td>string</td>
+<td><code>'pulse'</code> (default), <code>'wave'</code>, or <code>false</code></td>
+</tr>
+<tr>
+<td><code>sx</code></td>
+<td>object</td>
+<td>Style overrides (margin, radius, etc.)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Skeleton Variants</strong></p>
+<table>
+<thead>
+<tr>
+<th>Variant</th>
+<th>What it looks like</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>text</code></td>
+<td>Gray line (like a text line)</td>
+</tr>
+<tr>
+<td><code>rectangular</code></td>
+<td>Gray block (like a card/image)</td>
+</tr>
+<tr>
+<td><code>circular</code></td>
+<td>Gray circle (like avatar)</td>
+</tr>
+</tbody>
+</table>
+<p>Example code:</p>
+<pre><code>import React, { useState, useEffect } from 'react';
+import { Skeleton, Card, CardContent, Typography } from '@mui/material';
+
+export default function SkeletonExample() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() =&gt; {
+    // Simulate API load
+    const timer = setTimeout(() =&gt; setLoading(false), 3000);
+    return () =&gt; clearTimeout(timer);
+  }, []);
+
+  return (
+    &lt;Card sx={{ width: 300, m: 2 }}&gt;
+      &lt;CardContent&gt;
+        {loading ? (
+          &lt;&gt;
+            &lt;Skeleton variant=&quot;text&quot; width=&quot;80%&quot; /&gt;
+            &lt;Skeleton variant=&quot;text&quot; width=&quot;60%&quot; /&gt;
+            &lt;Skeleton variant=&quot;rectangular&quot; width=&quot;100%&quot; height={100} sx={{ mt: 2 }} /&gt;
+          &lt;/&gt;
+        ) : (
+          &lt;&gt;
+            &lt;Typography variant=&quot;h6&quot;&gt;Hello, John!&lt;/Typography&gt;
+            &lt;Typography variant=&quot;body2&quot;&gt;Here is your profile info.&lt;/Typography&gt;
+            &lt;img
+              src=&quot;https://via.placeholder.com/300x100&quot;
+              alt=&quot;Loaded&quot;
+              style={{ width: '100%', marginTop: 16 }}
+            /&gt;
+          &lt;/&gt;
+        )}
+      &lt;/CardContent&gt;
+    &lt;/Card&gt;
+  );
+}
+</code></pre>
+<h4 id="tooltip-and-popover">Tooltip and Popover</h4>
+<p><strong>Tooltip</strong></p>
+<p>Tooltip is a small floating label that appears when the user hovers, focuses, or touches an element.</p>
+<p><em>when to use a tooltip</em></p>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Explain icon functions</td>
+<td>"What does this button do?"</td>
+</tr>
+<tr>
+<td>Provide shortcut keys</td>
+<td>“Copy (Ctrl + C)”</td>
+</tr>
+<tr>
+<td>Describe UI labels in more detail</td>
+<td>“This setting affects global visibility”</td>
+</tr>
+</tbody>
+</table>
+<p>Tooltip Props</p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>string/node</td>
+<td>The content inside the tooltip (required)</td>
+</tr>
+<tr>
+<td><code>placement</code></td>
+<td>string</td>
+<td>Where the tooltip appears (top, bottom, etc.)</td>
+</tr>
+<tr>
+<td><code>arrow</code></td>
+<td>boolean</td>
+<td>Adds a pointing arrow</td>
+</tr>
+<tr>
+<td><code>enterDelay</code></td>
+<td>number</td>
+<td>Delay before showing (ms)</td>
+</tr>
+<tr>
+<td><code>leaveDelay</code></td>
+<td>number</td>
+<td>Delay before hiding (ms)</td>
+</tr>
+<tr>
+<td><code>followCursor</code></td>
+<td>boolean</td>
+<td>Tooltip follows the mouse</td>
+</tr>
+<tr>
+<td><code>disableHoverListener</code></td>
+<td>boolean</td>
+<td>Prevent hover triggering</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Placement oprtions:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Placement Value</th>
+<th>Tooltip Position</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"top"</code></td>
+<td>Above the element</td>
+</tr>
+<tr>
+<td><code>"bottom"</code></td>
+<td>Below the element</td>
+</tr>
+<tr>
+<td><code>"left"</code></td>
+<td>To the left</td>
+</tr>
+<tr>
+<td><code>"right"</code></td>
+<td>To the right</td>
+</tr>
+<tr>
+<td>Variants like <code>"top-start"</code> or <code>"bottom-end"</code> also exist</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>exmple:</p>
+<pre><code>import React from 'react';
+import { Tooltip, IconButton } from '@mui/material';
+import InfoIcon from '@mui/icons-material/Info';
+
+export default function TooltipExample() {
+  return (
+    &lt;Tooltip title=&quot;More info about this setting&quot; placement=&quot;right&quot; arrow&gt;
+      &lt;IconButton&gt;
+        &lt;InfoIcon /&gt;
+      &lt;/IconButton&gt;
+    &lt;/Tooltip&gt;
+  );
+}
+</code></pre>
+<p><strong>Popover</strong></p>
+<p>A Popover is a larger floating panel anchored to a specific element, triggered by a click or focus.
+It can contain rich content like buttons, text, inputs, etc.</p>
+<p><em>when to use a Popover</em></p>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show extra options</td>
+<td>"More Actions" menu on button click</td>
+</tr>
+<tr>
+<td>Display related content</td>
+<td>Profile preview on username click</td>
+</tr>
+<tr>
+<td>Inline editing or dropdown logic</td>
+<td>Click-to-edit panels</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Popover Props</strong></p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>open</code></td>
+<td>boolean</td>
+<td>Whether the popover is visible</td>
+</tr>
+<tr>
+<td><code>anchorEl</code></td>
+<td>HTMLElement</td>
+<td>The element it should attach to (click target)</td>
+</tr>
+<tr>
+<td><code>onClose</code></td>
+<td>function</td>
+<td>Callback to close the popover</td>
+</tr>
+<tr>
+<td><code>anchorOrigin</code></td>
+<td>object</td>
+<td>Controls where it appears in relation to the anchor</td>
+</tr>
+<tr>
+<td><code>transformOrigin</code></td>
+<td>object</td>
+<td>Adjusts the popover's internal alignment</td>
+</tr>
+<tr>
+<td><code>children</code></td>
+<td>node</td>
+<td>The content shown inside the popover</td>
+</tr>
+</tbody>
+</table>
+<p>Example code:</p>
+<pre><code>import React, { useState } from 'react';
+import {
+  Popover,
+  Typography,
+  Button,
+  Box
+} from '@mui/material';
+
+export default function PopoverExample() {
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleClick = (event) =&gt; {
+    setAnchorEl(event.currentTarget); // Save clicked button
+  };
+
+  const handleClose = () =&gt; {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+
+  return (
+    &lt;&gt;
+      &lt;Button variant=&quot;contained&quot; onClick={handleClick}&gt;
+        Show Popover
+      &lt;/Button&gt;
+
+      &lt;Popover
+        open={open}
+        anchorEl={anchorEl}
+        onClose={handleClose}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'center'
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'center'
+        }}
+      &gt;
+        &lt;Box sx={{ p: 2 }}&gt;
+          &lt;Typography&gt;This is a popover message.&lt;/Typography&gt;
+        &lt;/Box&gt;
+      &lt;/Popover&gt;
+    &lt;/&gt;
+  );
+}
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2025-07-01 15:33:35.843372+00:00
+-->
