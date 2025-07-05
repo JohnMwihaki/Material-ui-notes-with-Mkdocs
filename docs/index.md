@@ -2500,3 +2500,523 @@ export default function AvatarBadgeDemo() {
   );
 }
 ```
+
+### List,ListItem And Divider
+
+**List**
+
+A List in Material UI is a vertical container that holds multiple items — like a contact list, menu, chat messages, notifications, etc.
+
+It works like a traditional HTML ```<ul>``` (unordered list), but styled and controlled by MUI.
+
+**what is a ListItem**
+
+A ListItem is a single item inside a List — like one contact, one message, one task.
+
+*Key Props of Listem*
+
+| Prop         | Type    | Description                                         |
+| ------------ | ------- | --------------------------------------------------- |
+| `button`     | boolean | Makes the item behave like a button (clickable)     |
+| `selected`   | boolean | Highlights the item as selected                     |
+| `disabled`   | boolean | Disables interaction                                |
+| `sx`         | object  | Style using MUI system                              |
+| `alignItems` | string  | `"flex-start"` if content is top-aligned vertically |
+| `divider`    | boolean | Adds a thin divider line below this item (shortcut) |
+
+*What is a Divider*
+
+A Divider is a horizontal line used to visually separate content — usually between list items, cards, or sections of a page.
+
+*Key Props of Divider*
+
+| Prop          | Type                                 | Description                               |
+| ------------- | ------------------------------------ | ----------------------------------------- |
+| `variant`     | `'fullWidth'`, `'inset'`, `'middle'` | Controls indentation and line position    |
+| `orientation` | `'horizontal'`, `'vertical'`         | Direction of the line                     |
+| `sx`          | object                               | Custom style (width, color, margin, etc.) |
+| `light`       | boolean                              | Makes the line thinner or lighter color   |
+| `textAlign`   | `'left'`, `'right'`, `'center'`      | Aligns optional text on the divider       |
+
+*What is ListItemList*
+
+ListItemText is a special helper component from Material UI that is used inside a ListItem to display one or two lines of text — usually a title and subtext (like name + email).
+
+**Key Props**
+
+| Prop                       | Type           | What It Does                                |
+| -------------------------- | -------------- | ------------------------------------------- |
+| `primary`                  | string or node | Main content (first line, bold by default)  |
+| `secondary`                | string or node | Subtext (second line, gray by default)      |
+| `sx`                       | object         | Custom styling                              |
+| `primaryTypographyProps`   | object         | Props passed to the Typography of `primary` |
+| `secondaryTypographyProps` | object         | Props for `secondary` Typography            |
+
+
+**Example:**
+```
+import React from 'react';
+import { List, ListItem, ListItemText, Divider, Paper, Typography } from '@mui/material';
+
+export default function ContactList() {
+  const contacts = [
+    { name: 'John Kim', email: 'john@example.com' },
+    { name: 'Sarah Lee', email: 'sarah@example.com' },
+    { name: 'Mark Smith', email: 'mark@example.com' },
+  ];
+
+  return (
+    <Paper elevation={3} sx={{ maxWidth: 360, margin: 'auto', mt: 4 }}>
+      <Typography variant="h6" sx={{ p: 2, pb: 0 }}>
+        Contact List
+      </Typography>
+      <List>
+        {contacts.map((person, index) => (
+          <React.Fragment key={person.email}>
+            <ListItem button sx={{ "&:hover": { backgroundColor: "#f0f0f0" } }}>
+              <ListItemText
+                primary={person.name}
+                secondary={person.email}
+              />
+            </ListItem>
+            {index < contacts.length - 1 && <Divider />}
+          </React.Fragment>
+        ))}
+      </List>
+    </Paper>
+  );
+}
+```
+
+## Tables in Material UI
+
+*what is a table*
+
+A Table in MUI is a layout component for showing rows and columns of data, like you see in Excel or a data report.
+
+**The Table Components Family**
+
+| Component        | Purpose                                      |
+| ---------------- | -------------------------------------------- |
+| `Table`          | The overall table container                  |
+| `TableHead`      | The header (top row with column names)       |
+| `TableRow`       | A row — works in both header and body        |
+| `TableCell`      | A cell — each box inside a row               |
+| `TableBody`      | The section containing actual data rows      |
+| `TableContainer` | A wrapper (scrollable, with Paper if needed) |
+| `TableFooter`    | Optional footer section                      |
+| `Paper`          | Gives a card-like background to the table    |
+
+*Example*
+
+```
+import React from 'react';
+import {
+  Table, TableBody, TableCell, TableContainer,
+  TableHead, TableRow, Paper, Typography
+} from '@mui/material';
+
+const users = [
+  { name: 'John Kim', email: 'john@example.com', role: 'Admin' },
+  { name: 'Sarah Lee', email: 'sarah@example.com', role: 'Editor' },
+  { name: 'Mike Smith', email: 'mike@example.com', role: 'Viewer' },
+];
+
+export default function SimpleTable() {
+  return (
+    <TableContainer component={Paper} sx={{ maxWidth: 600, margin: 'auto', mt: 5 }}>
+      <Typography variant="h6" sx={{ p: 2 }}>
+        User List
+      </Typography>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>Name</TableCell>
+            <TableCell>Email</TableCell>
+            <TableCell>Role</TableCell>
+          </TableRow>
+        </TableHead>
+
+        <TableBody>
+          {users.map((user) => (
+            <TableRow key={user.email}>
+              <TableCell>{user.name}</TableCell>
+              <TableCell>{user.email}</TableCell>
+              <TableCell>{user.role}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+}
+```
+
+### Accordion and Expansion Panels in Material UI
+
+An Accordion is a UI component that lets you show and hide content by expanding and collapsing sections — like an FAQ list or toggle menu.
+
+*Accodion structure*
+
+| Part               | What It Does                                    |
+| ------------------ | ----------------------------------------------- |
+| `Accordion`        | The main wrapper for each toggle item           |
+| `AccordionSummary` | The clickable header — what you click to expand |
+| `AccordionDetails` | The hidden content that is revealed on expand   |
+
+**Prop**
+
+| Prop              | Type     | Description                         |
+| ----------------- | -------- | ----------------------------------- |
+| `expanded`        | boolean  | Manually controls if open or closed |
+| `defaultExpanded` | boolean  | Makes it open by default            |
+| `onChange`        | function | Triggered when open/close changes   |
+| `sx`              | object   | For custom styling                  |
+
+*AccordionSummary*
+
+| Prop                  | Type    | Description                           |
+| --------------------- | ------- | ------------------------------------- |
+| `expandIcon`          | element | Icon to show on the right (e.g. +, >) |
+| `aria-controls`, `id` | string  | Accessibility support                 |
+
+*AccordionDetails*
+
+This doesn’t take any special props — just put your content here like text, lists, forms, etc.
+
+**Example**
+
+```
+import React from 'react';
+import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+} from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+export default function FAQAccordion() {
+  return (
+    <div>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+          <Typography fontWeight="bold">What is your return policy?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            We offer a 30-day return policy for unused items with original packaging.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2-content"
+          id="panel2-header"
+        >
+          <Typography fontWeight="bold">How do I track my order?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            You will receive a tracking number via email once your order is shipped.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel3-content"
+          id="panel3-header"
+        >
+          <Typography fontWeight="bold">Can I cancel my order?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes, you can cancel within 24 hours of placing the order.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+    </div>
+  );
+}
+```
+### Chip and ChipGroup in Material UI
+
+A Chip is a compact, pill-like UI component used to represent a small piece of information such as a tag, category, user, or action
+
+**Key Props**
+
+| Prop       | Type        | What It Does                             |
+| ---------- | ----------- | ---------------------------------------- |
+| `label`    | string/node | The visible text inside the chip         |
+| `avatar`   | node        | Adds a small avatar/icon on the left     |
+| `icon`     | node        | Adds an icon before the label            |
+| `color`    | string      | MUI colors like `"primary"`, `"success"` |
+| `variant`  | string      | `"filled"` (default) or `"outlined"`     |
+| `onClick`  | function    | Makes the chip clickable                 |
+| `onDelete` | function    | Adds an `X` icon to remove the chip      |
+| `disabled` | boolean     | Disables interaction                     |
+| `sx`       | object      | For custom styles                        |
+
+# Customization and Theming
+
+**What is theme**
+
+A theme in Material UI is like the design language of your app — it defines how everything looks and feels:
+colors, typography, spacing, shadows, breakpoints, etc.
+
+**Default theme structure**
+
+```
+{
+  palette: {                
+    primary, secondary, error, warning, success, info, background, text
+  },
+  typography: {             
+    fontFamily, fontSize, h1, h2, h3, ..., body1, button
+  },
+  spacing: (factor) => number,
+  breakpoints: {            
+    values: { xs, sm, md, lg, xl }
+  },
+  shape: {
+    borderRadius            
+  },
+  shadows: []               
+}
+```
+
+**How to access Theme**
+
+**Option 1:  Using the useTheme() hook**
+
+```
+import { useTheme } from '@mui/material/styles';
+
+const theme = useTheme();
+console.log(theme.palette.primary.main); 
+```
+**Option 2:Access theme from the sx prop**
+
+ ```
+ <Box
+  sx={{
+    color: (theme) => theme.palette.primary.main,
+    padding: (theme) => theme.spacing(2),
+  }}
+>
+  Themed Box
+</Box>
+```
+### Creating a Custom Theme
+
+A custom theme lets you override Material UI’s default styles — like changing your app’s colors, fonts, spacing, borders, and more.
+
+*Tools:*
+
+- createTheme()-Material UI gives you this helper function:
+
+```
+import { createTheme } from '@mui/material/styles';
+```
+- ThemeProvider-To make your theme work across your app, you wrap it with:
+
+```
+import { ThemeProvider } from '@mui/material/styles';
+```
+*Example:Custom Theme*
+
+```
+import React from 'react';
+import {
+  createTheme,
+  ThemeProvider,
+  CssBaseline,
+  Typography,
+  Button,
+  Box
+} from '@mui/material';
+
+const customTheme = createTheme({
+  palette: {
+    primary: {
+      main: "#00695f",
+      contrastText: "#ffffff",
+    },
+    secondary: {
+      main: "#ff6f00",
+    },
+    background: {
+      default: "#f5f5f5",
+      paper: "#ffffff"
+    },
+    text: {
+      primary: "#212121"
+    }
+  },
+  typography: {
+    fontFamily: "'Poppins', sans-serif",
+    h4: {
+      fontWeight: 700,
+      fontSize: "2rem"
+    },
+    body1: {
+      fontSize: "1rem"
+    }
+  },
+  spacing: 4
+});
+
+export default function CustomThemeExample() {
+  return (
+    <ThemeProvider theme={customTheme}>
+      <CssBaseline />
+      <Box
+        sx={{
+          bgcolor: "background.paper",
+          p: 4,
+          borderRadius: 2,
+        }}
+      >
+        <Typography variant="h4" color="primary">
+          Custom Themed App
+        </Typography>
+        <Typography variant="body1" sx={{ mt: 2 }}>
+          This text uses your custom theme’s typography and spacing.
+        </Typography>
+        <Button variant="contained" color="secondary" sx={{ mt: 3 }}>
+          Themed Button
+        </Button>
+      </Box>
+    </ThemeProvider>
+  );
+}
+```
+
+**Styled API**
+
+The styled() API lets you create your own custom components with styles applied, just like Tailwind or styled-components — but with full MUI theme support.
+
+*Example:*
+
+```
+import { styled } from '@mui/material/styles';
+import Button from '@mui/material/Button';
+
+const MyButton = styled(Button)(({ theme }) => ({
+  backgroundColor: theme.palette.secondary.main,
+  color: theme.palette.common.white,
+  padding: theme.spacing(2),
+  borderRadius: theme.shape.borderRadius,
+  '&:hover': {
+    backgroundColor: theme.palette.secondary.dark,
+  }
+}));
+
+
+<MyButton>Styled Button</MyButton>
+```
+
+### Global Styles and CSS Baseline
+
+*Global Styles*
+
+Global styles are styles that affect your entire application, not just one component.
+They apply to everything — like body background, font, margin, etc.
+
+*CssBaseline*
+
+CssBaseline is a built-in Material UI component that resets default browser styles and applies theme-aware defaults globally.
+
+```
+import { CssBaseline } from '@mui/material';
+
+<ThemeProvider theme={customTheme}>
+  <CssBaseline />
+  <App />
+</ThemeProvider>
+
+```
+
+#   Responsive Design and Media Queries
+
+Responsive Design means making your app or website adapt to different screen sizes like phones, tablets, and desktops.
+
+### Breakpoints and Media Queries in MUI
+
+Breakpoints are specific screen widths where your design should change to look better.
+
+**MUI Default Breakpoints**
+
+| Breakpoint  | Key  | Screen Width    |
+| ----------- | ---- | --------------- |
+| Extra-small | `xs` | `0px` and up    |
+| Small       | `sm` | `600px` and up  |
+| Medium      | `md` | `900px` and up  |
+| Large       | `lg` | `1200px` and up |
+| Extra-large | `xl` | `1536px` and up |
+
+*How Do Media Queries Work in MUI?*
+
+MUI's Special sx Prop + theme.breakpoints
+MUI gives you built-in helpers for media queries, so you don’t have to write raw CSS.
+
+```
+<Box
+  sx={{
+    p: {
+      xs: 1,   // padding 8px on phones
+      sm: 2,   // padding 16px on tablets
+      md: 4    // padding 32px on desktops
+    }
+  }}
+>
+  Responsive Box
+</Box>
+```
+
+## useMediaQuery in Material UI
+
+useMediaQuery is a React hook provided by Material UI that lets you check the screen size directly in JavaScript
+
+All Types of Media Queries
+
+| Query Type                  | Example                              | Meaning               |
+| --------------------------- | ------------------------------------ | --------------------- |
+| `down("sm")`                | `< 600px`                            | Small screen (mobile) |
+| `up("md")`                  | `>= 900px`                           | Medium screen and up  |
+| `between("sm", "lg")`       | `600px - 1200px`                     | Tablet-sized          |
+| `(min-width:600px)`         | CSS-style query                      | Works without `theme` |
+| `"(orientation: portrait)"` | Matches phone/tablet vertical layout | Orientation detection |
+
+*Basic Example:*
+
+```
+import React from 'react';
+import { useMediaQuery, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+
+export default function MediaQueryExample() {
+  const theme = useTheme(); // access your theme breakpoints
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
+  return (
+    <Typography variant="h5">
+      {isSmallScreen ? 'Small screen (mobile)' : 'Large screen (tablet or desktop)'}
+    </Typography>
+  );
+}
+```
+
+
+
+
+
+
